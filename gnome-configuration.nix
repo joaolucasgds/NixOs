@@ -13,7 +13,9 @@
     yelp
     gnome-connections
     gnome-software
+    epiphany
+    geary
+    gnome-calendar
+    gnome-music
   ]);
-
-  
 }
