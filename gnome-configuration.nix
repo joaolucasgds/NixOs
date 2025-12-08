@@ -11,7 +11,6 @@
     simple-scan
     gnome-tour
     yelp
-    xterm
     gnome-connections
     gnome-software
   ]);
