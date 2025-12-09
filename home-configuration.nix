@@ -32,8 +32,9 @@ in
 
     ]; 
 
-    #Automatically activate extensions
     dconf.settings = {
+
+      #Automatically activate extensions
       "org/gnome/shell" = {
         disable-user-extensions = false;
 
@@ -118,8 +119,33 @@ in
         command = "kodi";
         binding = "<Control><Alt>k";
       };
-    };
 
+      #GNOME CORE & INTERFACE
+
+      # Search Provider Order (Calculator First)
+      "org/gnome/desktop/search-providers" = {
+        sort-order = [
+          "org.gnome.Calculator.desktop"
+          "org.gnome.Settings.desktop"
+          "org.gnome.Contacts.desktop"
+          "org.gnome.Nautilus.desktop"
+        ];
+      };
+
+      # Disable Mouse Acceleration
+      "org/gnome/desktop/peripherals/mouse" = {
+        accel-profile = "flat";
+      };
+
+      # Interface: Dark Mode, Blue Accent, 12h Clock
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+        accent-color = "blue";
+        clock-format = "12h";
+      };
+
+    };
+    
     programs.bash = {
       enable = true;
       initExtra = ''echo "Welcome to NixOs"'';
