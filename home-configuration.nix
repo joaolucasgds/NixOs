@@ -120,6 +120,13 @@ in
         binding = "<Control><Alt>k";
       };
 
+      # Files
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6" = {
+        name = "Files";
+	command = "nautilus";
+	binding = "<Control><Alt>f";
+      };
+
       #GNOME CORE & INTERFACE
 
       # Search Provider Order (Calculator First)
