@@ -63,8 +63,7 @@ in
       shellAliases = {
       	nvimnix = "sudo nvim /etc/nixos/configuration.nix";
       };
-
-    }
+    };
 
     home.stateVersion = "25.11";
   };
