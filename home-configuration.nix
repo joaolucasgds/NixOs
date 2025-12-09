@@ -59,13 +59,13 @@ in
 
     programs.bash = {
       enable = true;
-      shellInit = "Welcome to NixOs"
+      shellInit = ''echo "Welcome to NixOs"'';
       shellAliases = {
-      	nvimnix = "sudo nvim /etc/nixos/configuration.nix"
-      }
+      	nvimnix = "sudo nvim /etc/nixos/configuration.nix";
+      };
 
     }
 
-    home.stateVersion = "26.05";
+    home.stateVersion = "25.11";
   };
 }
