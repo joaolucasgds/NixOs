@@ -65,6 +65,59 @@ in
         shortcut-search = ["<Control><Alt>a"];
       };
 
+      #Config Custom Keybinds     
+      "org/gnome/settings-daemon/plugins/media-keys" = {
+        custom-keybindings = [
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/"
+        ];
+      };
+
+      # Terminal
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+        name = "Terminal";
+        command = "kgx";
+        binding = "<Control><Alt>t";
+      };
+
+      # Browser
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+        name = "Browser";
+        command = "flatpak run app.zen_browser.zen";
+        binding = "<Control><Alt>n";
+      };
+
+      # ProtonPass
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+        name = "ProtonPass";
+        command = "proton-pass";
+        binding = "<Control><Alt>p";
+      };
+
+      # Discord (Vesktop)
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+        name = "Discord";
+        command = "vesktop"; 
+        binding = "<Control><Alt>d";
+      };
+
+      # Neovim
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
+        name = "Neovim";
+        command = "nvim"; 
+        binding = "<Control><Alt>v";
+      };
+
+      # Kodi
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5" = {
+        name = "Kodi";
+        command = "kodi";
+        binding = "<Control><Alt>k";
+      };
     };
 
     programs.bash = {
