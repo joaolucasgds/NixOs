@@ -14,7 +14,7 @@ in
 
   home-manager.users.jl = { pkgs, ... }: {
     
-    home.packages = [ 
+    home.packages = with pkgs; [ 
 
       #Gnome extensions
 
