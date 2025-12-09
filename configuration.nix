@@ -7,6 +7,7 @@
       ./services-configuration.nix
       ./flatpak-configuration.nix
       ./gnome-configuration.nix
+      ./home-configuration.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
