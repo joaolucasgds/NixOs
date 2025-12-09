@@ -59,7 +59,7 @@ in
 
     programs.bash = {
       enable = true;
-      shellInit = ''echo "Welcome to NixOs"'';
+      initExtra = ''echo "Welcome to NixOs"'';
       shellAliases = {
       	nvimnix = "sudo nvim /etc/nixos/configuration.nix";
       };
