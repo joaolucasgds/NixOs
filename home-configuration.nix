@@ -53,8 +53,18 @@ in
       };
 
       #Config Extensions
-      "org/gnome/shell/extensions/blur-my-shell" = {
+      "org/gnome/shell/extensions/blur-my-shell/panel" = {
+        blur = false;
       };
+
+      "org/gnome/shell/extensions/clipboard-indicator" = {
+	excluded-apps = ["Proton Pass"];
+      };
+
+      "org/gnome/shell/extensions/search-light" = {
+        shortcut-search = ["<Control><Alt>a"];
+      };
+
     };
 
     programs.bash = {
