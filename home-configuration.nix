@@ -57,7 +57,15 @@ in
       };
     };
 
-    programs.bash.enable = true;
-    home.stateVersion = "25.11";
+    programs.bash = {
+      enable = true;
+      shellInit = "Welcome to NixOs"
+      shellAliases = {
+      	nvimnix = "sudo nvim /etc/nixos/configuration.nix"
+      }
+
+    }
+
+    home.stateVersion = "26.05";
   };
 }
