@@ -10,6 +10,9 @@ let
     "net.nokyan.Resources"
   ];
 in {
+  
+  services.flatpak.enable = true;
+
   system.activationScripts.flatpakManagement = {
     text = ''
       # 2. Ensure the Flathub repo is added
