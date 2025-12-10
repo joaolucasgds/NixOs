@@ -70,6 +70,13 @@ in
       "org/gnome/shell/extensions/blur-my-shell/panel" = {
         blur = false;
       };
+      "org/gnome/shell/extensions/blur-my-shell/applications" = {
+      	blur = true;
+	dynamic-opacity = false;
+	enable-all = false;
+	sigma = 10;
+	whitelist = ["Alacritty"];
+      };
 
       "org/gnome/shell/extensions/clipboard-indicator" = {
 	excluded-apps = ["Proton Pass"];
@@ -196,7 +203,7 @@ in
       settings = {
       	
 	window = {
-	  opacity = 0.0;
+	  opacity = 0.1;
 	  blur = true;
 	  decorations = "None";
 	  padding = {
