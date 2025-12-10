@@ -6,6 +6,7 @@ let
   desiredFlatpaks = [
     "app.zen_browser.zen"
     "dev.vencord.Vesktop"
+    "com.brave.Browser"
     "net.nokyan.Resources"
   ];
 in {
