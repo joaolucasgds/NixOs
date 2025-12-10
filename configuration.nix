@@ -4,26 +4,23 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./services-configuration.nix
-      ./flatpak-configuration.nix
       ./gnome-configuration.nix
       ./home-configuration.nix
+      ./flatpak-configuration.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_6_12;
+  boot.kernelPackages = pkgs.linuxPackages_6_12; # I want the lastest kernel at some point
 
-  networking.hostName = "nixos"; 
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  networking.hostName = "NixOs"; 
 
   # Enable networking
   networking.networkmanager.enable = true;
+  # Configure network proxy if necessary
+  # networking.proxy.default = "http://user:password@proxy:port/";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   time.timeZone = "America/Sao_Paulo";
 
@@ -72,11 +69,7 @@
     #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   users.users.jl = {
-    isNormalUser = true;
     description = "João Lucas";
     extraGroups = [ "networkmanager" "wheel" ];
   };
@@ -86,6 +79,7 @@
 
   environment.systemPackages = with pkgs; [
 	proton-pass
+	protonvpn-gui
 	neovim
   	modrinth-app
 	jdk21
