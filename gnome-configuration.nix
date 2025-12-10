@@ -17,5 +17,6 @@
     geary
     gnome-calendar
     gnome-music
+    seahorse
   ]);
 }
