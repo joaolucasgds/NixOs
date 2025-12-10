@@ -8,6 +8,7 @@
       ./home-configuration.nix
       ./software-configuration.nix
       ./flatpak-configuration.nix
+      ./fonts-configuration.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
