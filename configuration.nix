@@ -74,20 +74,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-	proton-pass
-	protonvpn-gui
-	neovim
-  	modrinth-app
-	jdk21
-	fastfetch
-	git
-	lazygit
-  ];
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
