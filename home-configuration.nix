@@ -66,7 +66,7 @@ in
         shortcut-search = ["<Control><Alt>a"];
       };
 
-      #Config Custom Keybinds     
+      #Config Custom Keybinds   There must be a better way of doing this instead of repeating myself like this  
       "org/gnome/settings-daemon/plugins/media-keys" = {
         custom-keybindings = [
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
@@ -76,6 +76,7 @@ in
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/"
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/"
 	  "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/"
+	  "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/"
         ];
       };
 
@@ -126,6 +127,13 @@ in
         name = "Files";
 	command = "nautilus";
 	binding = "<Control><Alt>f";
+      };
+
+      # Settings
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7" = {
+ 	name = "Settings";
+	command = "gnome-control-center";
+	binding = "<Control><Alt>s";
       };
 
       #GNOME CORE & INTERFACE
