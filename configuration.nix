@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./gnome-configuration.nix
       ./home-configuration.nix
+      ./software-configuration.nix
       ./flatpak-configuration.nix
     ];
 
