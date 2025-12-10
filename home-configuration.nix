@@ -77,6 +77,7 @@ in
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/"
 	  "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/"
 	  "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/"
+	  "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/"
         ];
       };
 
@@ -134,6 +135,13 @@ in
  	name = "Settings";
 	command = "gnome-control-center";
 	binding = "<Control><Alt>s";
+      };
+
+      # ProtonVPN
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8" = {
+        name = "ProtonVPN";
+	command = "protonvpn-app";
+	binding = "<Control><Alt>j";
       };
 
       #GNOME CORE & INTERFACE
