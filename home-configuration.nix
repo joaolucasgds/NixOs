@@ -11,6 +11,8 @@ in
 
   users.users.jl.isNormalUser = true; 
 
+  nixpkgs.config.allowUnfree = true;
+
   home-manager.users.jl = { pkgs, ... }: {
     
     home.packages = with pkgs; [ 
