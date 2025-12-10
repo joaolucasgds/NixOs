@@ -8,6 +8,7 @@ let
     "dev.vencord.Vesktop"
     "com.brave.Browser"
     "net.nokyan.Resources"
+    "com.heroicgameslauncher.hgl"
   ];
 in {
   
