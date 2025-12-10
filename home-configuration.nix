@@ -11,10 +11,10 @@ in
 
   users.users.jl.isNormalUser = true; 
 
-  nixpkgs.config.allowUnfree = true;
-
   home-manager.users.jl = { pkgs, ... }: {
     
+    nixpkgs.config.allowUnfree = true;
+
     home.packages = with pkgs; [ 
       #Programing
       neovim
