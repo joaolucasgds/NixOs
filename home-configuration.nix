@@ -97,7 +97,7 @@ in
       # Terminal
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
         name = "Terminal";
-        command = "kgx";
+        command = "alacritty";
         binding = "<Control><Alt>t";
       };
 
