@@ -88,6 +88,10 @@ in
         shortcut-search = ["<Control><Alt>a"];
       };
 
+      "org/gnome/shell/extensions/gamebar-overlay" = {
+      	show-indicator = false;
+      };
+
       "org/gnome/shell/extensions/display-brightness-ddcutil" = {
 	button-location = 1;
 	ddcutil-binary-path = "${pkgs.ddcutil}/bin/ddcutil";
