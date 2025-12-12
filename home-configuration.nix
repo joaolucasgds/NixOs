@@ -24,7 +24,10 @@ in
       wl-clipboard
       
       #Proton
-      proton-pass
+      proton-pass	
+      
+      #Tools
+      veracrypt
 
       #Social
       vesktop
