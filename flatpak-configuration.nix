@@ -5,8 +5,13 @@ let
   # 1. Declare the Flatpaks you *want* on your system
   desiredFlatpaks = [
     "app.zen_browser.zen"
+
+    #System Monitor
     "net.nokyan.Resources"
+    
+    #Gaming
     "com.heroicgameslauncher.hgl"
+    "org.vinegarhq.Sober"
   ];
 in {
   
