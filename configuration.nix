@@ -10,6 +10,7 @@
       ./home-configuration.nix
       ./software-configuration.nix
       ./flatpak-configuration.nix
+      ./inputmethod-configuration.nix
       ./fonts-configuration.nix
     ];
 
