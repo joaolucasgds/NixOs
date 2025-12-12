@@ -6,7 +6,8 @@ let
   desiredFlatpaks = [
     "app.zen_browser.zen"
 
-    #System Monitor
+    #Tools
+    "com.dec05eba.gpu_screen_recorder"
     "net.nokyan.Resources"
     
     #Gaming
