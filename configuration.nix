@@ -82,6 +82,11 @@
   users.users.jl = {
     description = "João Lucas";
     extraGroups = [ "networkmanager" "wheel" "i2c"];
+    initialPassword = "123";
+  };
+
+  users.users.root = {
+    initialPassword = "123"; #Set up actual passwords on install
   };
 
   # Some programs need SUID wrappers, can be configured further or are
