@@ -4,6 +4,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+	gpu-screen-recorder
 	lazygit
 	ddcutil
 	jdk25
