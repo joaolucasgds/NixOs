@@ -58,6 +58,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = false;
 
+  #Needed for ddcutil
+  hardware.i2c.enable = true;
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -76,7 +79,7 @@
 
   users.users.jl = {
     description = "João Lucas";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "i2c"];
   };
 
   # Some programs need SUID wrappers, can be configured further or are

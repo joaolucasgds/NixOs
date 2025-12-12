@@ -5,6 +5,7 @@
 
   environment.systemPackages = with pkgs; [
 	lazygit
+	ddcutil
 	jdk25
 	protonvpn-gui
   ];

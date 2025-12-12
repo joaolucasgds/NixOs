@@ -42,6 +42,7 @@ in
       gnomeExtensions.hide-top-bar
       gnomeExtensions.hide-the-dock-in-overview
       gnomeExtensions.search-light
+      gnomeExtensions.brightness-control-using-ddcutil
 
     ]; 
 
@@ -63,6 +64,7 @@ in
           hide-top-bar.extensionUuid
           hide-the-dock-in-overview.extensionUuid
           search-light.extensionUuid
+	  brightness-control-using-ddcutil.extensionUuid
         ];
       };
 
