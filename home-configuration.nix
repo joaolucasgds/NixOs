@@ -47,6 +47,7 @@ in
       gnomeExtensions.hide-the-dock-in-overview
       gnomeExtensions.search-light
       gnomeExtensions.brightness-control-using-ddcutil
+      gnomeExtensions.do-not-disturb-while-screen-sharing-or-recording
 
     ]; 
 
@@ -69,6 +70,7 @@ in
           hide-the-dock-in-overview.extensionUuid
           search-light.extensionUuid
 	  brightness-control-using-ddcutil.extensionUuid
+	  do-not-disturb-while-screen-sharing-or-recording.extensionUuid
         ];
       };
 
