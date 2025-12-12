@@ -89,6 +89,10 @@
     initialPassword = "123"; #Set up actual passwords on install
   };
 
+  security.sudo.extraConfig = ''
+    Defaults rootpw
+  '';
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
