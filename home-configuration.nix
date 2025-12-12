@@ -88,6 +88,23 @@ in
         shortcut-search = ["<Control><Alt>a"];
       };
 
+      "org/gnome/shell/extensions/display-brightness-ddcutil" = {
+	button-location = 1;
+	ddcutil-binary-path = "${pkgs.ddcutil}/bin/ddcutil";
+	ddcutil-queue-ms = 130.0;
+	ddcutil-sleep-multiplier = 40.0;
+	decrease-brightness-shortcut = ["<Control>XF86MonBrightnessDown"];
+	hide-system-indicator = true;
+	increase-brightness-shortcut = ["<Control>XF86MonBrightnessUp"];
+	position-system-menu = 4.0;
+	show-all-slider = false;
+	show-display-name = false;
+	show-internal-slider = false;
+	show-osd = true;
+	show-value-label = false;
+	step-change-keyboard = 2.0;
+      };
+
       #Config Custom Keybinds   There must be a better way of doing this instead of repeating myself like this  
       "org/gnome/settings-daemon/plugins/media-keys" = {
         custom-keybindings = [
