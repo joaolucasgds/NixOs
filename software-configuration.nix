@@ -5,6 +5,7 @@
 
   environment.systemPackages = with pkgs; [
 	gpu-screen-recorder
+	gpu-screen-recorder-gtk
 	lazygit
 	ddcutil
 	jdk25
