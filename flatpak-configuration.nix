@@ -5,7 +5,6 @@ let
   # 1. Declare the Flatpaks you *want* on your system
   desiredFlatpaks = [
     "app.zen_browser.zen"
-    "com.brave.Browser"
     "net.nokyan.Resources"
     "com.heroicgameslauncher.hgl"
   ];

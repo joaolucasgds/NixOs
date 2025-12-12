@@ -29,6 +29,7 @@ in
       #Social
       vesktop
       modrinth-app
+      brave
 
       #Gnome extensions
       gnomeExtensions.blur-my-shell
