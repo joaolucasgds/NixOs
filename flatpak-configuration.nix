@@ -8,6 +8,7 @@ let
 
     #Tools
     "com.dec05eba.gpu_screen_recorder"
+    "app.drey.Warp"
     "net.nokyan.Resources"
     
     #Gaming
