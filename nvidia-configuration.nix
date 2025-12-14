@@ -4,10 +4,9 @@
     enable = true;
   };
 
-  # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
 
-  boot.kernelParams = [ "nvidia.NVreg_EnableGspFirmware=0" ];
+  #boot.kernelParams = [ "nvidia.NVreg_EnableGspFirmware=0" ];
 
   hardware.nvidia = {
 
