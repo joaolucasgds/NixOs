@@ -51,6 +51,13 @@ in
 
     ]; 
 
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+
+      desktop = null;
+    };
+
     dconf.settings = {
 
       #Automatically activate extensions
