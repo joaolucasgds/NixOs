@@ -32,6 +32,7 @@ in
       #Social
       vesktop
       modrinth-app
+      youtube-music
       brave
 
       #Gnome extensions
