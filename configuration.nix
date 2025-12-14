@@ -18,7 +18,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_6_12; # I want the lastest kernel at some point
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.hostName = "NixOs"; 
 
