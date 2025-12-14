@@ -48,6 +48,7 @@ in
       gnomeExtensions.search-light
       gnomeExtensions.brightness-control-using-ddcutil
       gnomeExtensions.do-not-disturb-while-screen-sharing-or-recording
+      gnomeExtensions.focus-follows-workspace
 
     ]; 
 
@@ -78,6 +79,7 @@ in
           search-light.extensionUuid
 	  brightness-control-using-ddcutil.extensionUuid
 	  do-not-disturb-while-screen-sharing-or-recording.extensionUuid
+	  focus-follows-workspace.extensionUuid
         ];
       };
 
