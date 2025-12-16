@@ -27,6 +27,7 @@ in
       proton-pass	
       
       #Tools
+      deluge-gtk
       veracrypt
 
       #Social
