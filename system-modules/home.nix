@@ -17,10 +17,6 @@ in
     
     #Programming
 
-    programs.lazygit = {
-      enable = true;
-    };
-
     programs.git = {
       enable = true;
       userName = "Joao Lucas Gomes de Souza"; 
