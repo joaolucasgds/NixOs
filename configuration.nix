@@ -4,15 +4,15 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./nvidia-configuration.nix
+      ./system-modules/nvidia.nix
 
-      ./gnome-configuration.nix
-      ./home-configuration.nix
-      ./software-configuration.nix
-      ./flatpak-configuration.nix
-      ./earlyoom-configuration.nix
-      ./inputmethod-configuration.nix
-      ./fonts-configuration.nix
+      ./system-modules/gnome.nix
+      ./system-modules/home.nix
+      ./system-modules/software.nix
+      ./system-modules/flatpak.nix
+      ./system-modules/earlyoom.nix
+      ./system-modules/inputmethod.nix
+      ./system-modules/fonts.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
