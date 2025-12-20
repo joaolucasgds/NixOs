@@ -12,13 +12,13 @@ in
   users.users.jl.isNormalUser = true; 
 
   home-manager.users.jl = { pkgs, ... }: {
-    
-    nixpkgs.config.allowUnfree = true;
-    
-    #Programming
 
-    #Tool
-    
+    imports = [
+	../home-config
+    ];
+
+    nixpkgs.config.allowUnfree = true;
     home.stateVersion = "25.11";
+
   };
 }
