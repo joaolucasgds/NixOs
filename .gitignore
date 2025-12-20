@@ -1,2 +1,6 @@
 hardware-configuration.nix
 
+#Nix Build Symlinks
+result
+result-*
+
