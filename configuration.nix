@@ -9,6 +9,7 @@
       ./system-modules/gnome.nix
       ./system-modules/home.nix
       ./system-modules/software.nix
+      ./system-modules/services.nix
       ./system-modules/flatpak.nix
       ./system-modules/earlyoom.nix
       ./system-modules/inputmethod.nix
