@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
     dconf.settings = {
@@ -145,6 +145,16 @@
         };
 
         # GNOME CORE & INTERFACE
+
+	# Enable The Correct Input Sources
+	"org/gnome/desktop/input-sources" = {
+	    sources = [
+		# The tuple format is [ "TYPE" "VALUE" ]
+		(lib.hm.gvariant.mkTuple [ "xkb" "br" ])      # Portuguese (Brazil)
+		(lib.hm.gvariant.mkTuple [ "ibus" "mozc-on" ]) # Japanese (Mozc)
+	    ];
+	    per-window = false; 
+	};
 
         # Search Provider Order (Calculator First)
         "org/gnome/desktop/search-providers" = {
