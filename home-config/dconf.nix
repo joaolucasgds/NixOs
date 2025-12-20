@@ -164,7 +164,6 @@
         # Interface: Dark Mode, Blue Accent, 12h Clock
         "org/gnome/desktop/interface" = {
             color-scheme = "prefer-dark";
-            accent-color = "blue";
             clock-format = "12h";
         };
     };
