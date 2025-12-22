@@ -5,6 +5,7 @@ let
   # 1. Declare the Flatpaks you *want* on your system
   desiredFlatpaks = [
     "app.zen_browser.zen"
+    "io.freetubeapp.FreeTube"
 
     #Tools
     "com.dec05eba.gpu_screen_recorder"
