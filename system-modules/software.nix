@@ -12,16 +12,6 @@
   ];
 
   #Programs that need system-level configuration
-  programs.git = {
-    enable = true;
-    config = {
-      user = {
-        name = "Joao Lucas Gomes de Souza";
-        email = "joaolucasgdesouza@gmail.com";
-      };
-    };
-  };
-
   # Gaming
   programs.steam = {
     enable = true;
