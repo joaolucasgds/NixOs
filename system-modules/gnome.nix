@@ -18,5 +18,6 @@
     gnome-calendar
     gnome-music
     seahorse
+    gnome-console
   ]);
 }

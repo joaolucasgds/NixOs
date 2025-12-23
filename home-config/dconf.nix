@@ -171,10 +171,17 @@
             accel-profile = "flat";
         };
 
-        # Interface: Dark Mode, Blue Accent, 12h Clock
+        # Interface: Dark Mode, 12h Clock
         "org/gnome/desktop/interface" = {
             color-scheme = "prefer-dark";
             clock-format = "12h";
         };
+
+	# Nautilus extensions
+	
+	# nautilus-open-any-terminal
+	"com/github/stunkymonkey/nautilus-open-any-terminal" = {
+	    terminal = "alacritty";
+	};
     };
 }
