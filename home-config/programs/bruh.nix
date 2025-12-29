@@ -7,6 +7,9 @@
 	    value=$2
 	    laptopDisplayMinimunBrightnessValue=50
 
+	    # KILL previous instances so they don't fight for the I2C bus
+	    pkill -f "ddcutil --display 1 setvcp 10" || true
+
 	    ${pkgs.brightnessctl}/bin/brightnessctl set $value$operator
 
 	    ${pkgs.ddcutil}/bin/ddcutil --display 1 setvcp 10 "$operator" "$value" > /dev/null 2>&1 &
