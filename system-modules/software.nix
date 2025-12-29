@@ -7,6 +7,7 @@
   	tree-sitter
 	lazygit
 	ddcutil
+	brightnessctl
 	jdk25
 	protonvpn-gui
   ];
