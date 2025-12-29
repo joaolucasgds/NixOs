@@ -78,6 +78,9 @@
                 "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/"
                 "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/"
                 "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/"
+                "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/"
+                "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/"
+                "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11/"
             ];
         };
 
@@ -143,6 +146,27 @@
             command = "protonvpn-app";
             binding = "<Control><Alt>j";
         };
+
+	# Youtube Music
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9" = {
+	    name = "Youtube Music";
+	    command = "youtube-music";
+	    binding = "<Control><Alt>m";
+	};
+
+	# Increase Brightness
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10" = {
+	    name = "Increase Brightness";
+	    command = "bruh + 10";
+	    binding = "<Control><Alt>KP_Subtract";
+	};
+
+	# Decrease Brightness
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11" = {
+	    name = "Decrease Brightness";
+	    command = "bruh - 10";
+	    binding = "<Control><Alt>KP_Add";
+	};
 
         # GNOME CORE & INTERFACE
 
