@@ -13,7 +13,6 @@
 	./programs/fastfetch.nix
 	./programs/git.nix
 	./programs/lazygit.nix
-	./programs/mpv.nix
 	./programs/bruh.nix
 	./programs/nautilus-extensions.nix
     ];
