@@ -201,6 +201,12 @@
             clock-format = "12h";
         };
 
+	# Auto Select Wallpaper
+	"org/gnome/desktop/background" = {
+	    picture-uri = "file:///home/jl/.local/share/backgrounds/lucyna.png";
+	    picture-uri-dark = "file:///home/jl/.local/share/backgrounds/lucyna.png";
+	};
+
 	# Nautilus extensions
 	
 	# nautilus-open-any-terminal
