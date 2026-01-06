@@ -6,6 +6,7 @@
 	./homepkgs.nix
 	./dconf.nix
 	./xdg.nix
+	./wallpapers.nix
 
 	#Programs
 	./programs/alacritty.nix
