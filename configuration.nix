@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./system-modules/secureboot.nix
       ./system-modules/nvidia.nix
 
       ./system-modules/gnome.nix
