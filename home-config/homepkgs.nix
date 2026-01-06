@@ -19,7 +19,7 @@
 	  #Social
 	  vesktop
 	  modrinth-app
-	  youtube-music
+	  pear-desktop #AKA youtube-music
 	  brave
 
 	  #Gnome extensions
