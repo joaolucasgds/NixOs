@@ -17,7 +17,6 @@
 	  veracrypt
 
 	  #Social
-	  vesktop
 	  modrinth-app
 	  pear-desktop #AKA youtube-music
 	  brave
