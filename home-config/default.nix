@@ -17,7 +17,7 @@
 	./programs/fastfetch.nix
 	./programs/git.nix
 	./programs/lazygit.nix
-	./programs/vesktop
+	./programs/vesktop.nix
 	./programs/bruh.nix
 	./programs/nautilus-extensions.nix
     ];
