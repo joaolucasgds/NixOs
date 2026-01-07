@@ -19,7 +19,6 @@
 	./programs/lazygit.nix
 	./programs/vesktop.nix
 	./programs/bruh.nix
-	./programs/nautilus-extensions.nix
     ];
 }
 

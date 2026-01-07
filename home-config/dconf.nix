@@ -207,11 +207,5 @@
 	    picture-uri-dark = "file:///home/jl/.local/share/backgrounds/lucyna.png";
 	};
 
-	# Nautilus extensions
-	
-	# nautilus-open-any-terminal
-	"com/github/stunkymonkey/nautilus-open-any-terminal" = {
-	    terminal = "alacritty";
-	};
     };
 }

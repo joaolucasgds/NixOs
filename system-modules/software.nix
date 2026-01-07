@@ -14,6 +14,13 @@
   ];
 
   #Programs that need system-level configuration
+  
+  # Nautilus extension
+    programs.nautilus-open-any-terminal = {
+	enable = true;
+	terminal = "alacritty";
+    };
+
   # Gaming
   programs.steam = {
     enable = true;
