@@ -11,6 +11,7 @@
 	jdk25
 	protonvpn-gui
 	ffmpeg #no idea how many times i installed this using nix-shell
+	tree
   ];
 
   #Programs that need system-level configuration
