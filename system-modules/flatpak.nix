@@ -24,6 +24,8 @@
             # --- Tools & Utilities ---
             "com.dec05eba.gpu_screen_recorder"
             "app.drey.Warp"
+	    "dev.bragefuglseth.Keypunch"
+	    "org.gnome.Boxes"
             "net.nokyan.Resources"
 
             # --- Gaming ---
