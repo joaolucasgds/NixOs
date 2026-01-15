@@ -35,7 +35,31 @@ in
                     "<leader>fb" = { action = ":Telescope buffers<CR>";    desc = "Buffers"; };
                     "<leader>fh" = { action = ":Telescope help_tags<CR>";  desc = "Help Tags"; };
                 };
+		
+		# --- Helper Plugins --- #
+		lsp.enable = true;
 
+		languages = {
+                    enableTreesitter = true;
+
+                    nix.enable = true;
+                    rust.enable = true;
+                    clang.enable = true;
+                    lua.enable = true;
+                };
+
+		telescope = {
+                    enable = true;
+                    setupOpts = {
+                        defaults = {
+                            prompt_prefix = " ";
+                            selection_caret = " ";
+                        };
+                    };
+                };
+		
+		# test harpoon soon
+		autocomplete.blink-cmp.enable = true;
 	    };
 	};
     };
