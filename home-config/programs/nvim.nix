@@ -29,11 +29,14 @@ in
                 };
 
                 maps.normal = {
-                    # Standard Telescope Keybinds
+                    # Telescope Keybinds
                     "<leader>ff" = { action = ":Telescope find_files<CR>"; desc = "Find Files"; };
                     "<leader>fg" = { action = ":Telescope live_grep<CR>";  desc = "Live Grep"; };
                     "<leader>fb" = { action = ":Telescope buffers<CR>";    desc = "Buffers"; };
                     "<leader>fh" = { action = ":Telescope help_tags<CR>";  desc = "Help Tags"; };
+                    "<leader>fd" = { action = ":Telescope diagnostics<CR>"; desc = "Find Diagnostics"; };
+                    # Open the error message in a floating window for the current line
+                    "<leader>e"  = { action = ":lua vim.diagnostic.open_float()<CR>"; desc = "Show Line Diagnostics"; };
                 };
             
                 # --- Helper Plugins --- #
