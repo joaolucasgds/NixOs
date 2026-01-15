@@ -11,6 +11,33 @@ in
 
     programs.nvf = {
 	enable = true;
+
+	settings = {
+	    vim = {
+		# --- Core --- #
+                globals = {
+                    mapleader = " ";
+                    maplocalleader = "\\";
+                };
+
+                options = {
+                    shiftwidth = 4;
+                    tabstop = 4;
+                    softtabstop = 4;
+                    expandtab = true;
+                    number = true;
+                };
+
+                maps.normal = {
+                    # Standard Telescope Keybinds
+                    "<leader>ff" = { action = ":Telescope find_files<CR>"; desc = "Find Files"; };
+                    "<leader>fg" = { action = ":Telescope live_grep<CR>";  desc = "Live Grep"; };
+                    "<leader>fb" = { action = ":Telescope buffers<CR>";    desc = "Buffers"; };
+                    "<leader>fh" = { action = ":Telescope help_tags<CR>";  desc = "Help Tags"; };
+                };
+
+	    };
+	};
     };
 }
 
