@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 let
     nvf = import (builtins.fetchTarball {
