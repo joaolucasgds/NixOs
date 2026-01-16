@@ -1,9 +1,7 @@
-{ config, pkgs, ... }:
+{ inputs, ... }:
 
 {
-    imports = [
-        "${builtins.fetchTarball "https://github.com/gmodena/nix-flatpak/archive/v0.5.2.tar.gz"}/modules/nixos.nix"
-    ];
+    imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
 
     services.flatpak = {
         enable = true;
@@ -24,8 +22,8 @@
             # --- Tools & Utilities ---
             "com.dec05eba.gpu_screen_recorder"
             "app.drey.Warp"
-	    "dev.bragefuglseth.Keypunch"
-	    "org.gnome.Boxes"
+	        "dev.bragefuglseth.Keypunch"
+	        "org.gnome.Boxes"
             "net.nokyan.Resources"
 
             # --- Gaming ---
