@@ -4,19 +4,27 @@
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-        home-manager.url = "github:nix-community/home-manager";
-        home-manager.inputs.nixpkgs.follows = "nixpkgs";
+        home-manager = { 
+            url = "github:nix-community/home-manager";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
-        nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.5.2";
+        nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
 
-        nvf.url = "github:NotAShelf/nvf";
+        nvf = {
+            url = "github:NotAShelf/nvf";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
         wallpapers = {
             url = "git+https://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@github.com/JoaoLucasGdS/Wallpapers.git?ref=main";
             flake = false;
         };
 
-        lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
+        lanzaboote = { 
+            url = "github:nix-community/lanzaboote/v1.0.0";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = { self, nixpkgs, ... }@inputs: {
@@ -31,4 +39,3 @@
 
     };
 }
-
