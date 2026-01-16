@@ -1,24 +1,16 @@
-{ config, pkgs, lib, ... }:
+{ inputs, ... }:
 
-let
-  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz;
-in
 {
-  imports =
-    [
-      (import "${home-manager}/nixos")
-    ];
+    imports = [ inputs.home-manager.nixosModules.home-manager ];
 
-  users.users.jl.isNormalUser = true; 
+    users.users.jl.isNormalUser = true;
 
-  home-manager.users.jl = { pkgs, ... }: {
+    home-manager.users.jl = { pkgs, ... }: {
 
-    imports = [
-	../home-config
-    ];
+        imports = [ ../home-config ];
 
-    nixpkgs.config.allowUnfree = true;
-    home.stateVersion = "25.11";
+        nixpkgs.config.allowUnfree = true;
+        home.stateVersion = "25.11";
 
-  };
+    };
 }
