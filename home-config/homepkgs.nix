@@ -14,7 +14,7 @@
 	  
 	  #Tools
 	  deluge-gtk
-	  veracrypt
+        #veracrypt
 
 	  #Social
 	  modrinth-app
