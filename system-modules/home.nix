@@ -5,14 +5,17 @@
 
     users.users.jl.isNormalUser = true;
 
-    home-manager.users.jl = { pkgs, ... }: {
+    home-manager = {
 
         extraSpecialArgs = { inherit inputs; };
 
-        imports = [ ../home-config ];
+        users.jl = { pkgs, ... }: {
 
-        nixpkgs.config.allowUnfree = true;
-        home.stateVersion = "25.11";
+            imports = [ ../home-config ];
 
+            nixpkgs.config.allowUnfree = true;
+            home.stateVersion = "25.11";
+
+        };
     };
 }
