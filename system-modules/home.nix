@@ -7,6 +7,8 @@
 
     home-manager.users.jl = { pkgs, ... }: {
 
+        extraSpecialArgs = { inherit inputs; };
+
         imports = [ ../home-config ];
 
         nixpkgs.config.allowUnfree = true;
