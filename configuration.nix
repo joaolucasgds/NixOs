@@ -1,20 +1,19 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./system-modules/secureboot.nix
-      ./system-modules/nvidia.nix
+    imports = [
+        ./hardware-configuration.nix
+        ./modules/system/secureboot.nix
 
-      ./system-modules/gnome.nix
-      ./system-modules/home.nix
-      ./system-modules/software.nix
-      ./system-modules/services.nix
-      ./system-modules/flatpak.nix
-      ./system-modules/earlyoom.nix
-      ./system-modules/inputmethod.nix
-      ./system-modules/fonts.nix
+        ./modules/system/gnome.nix
+        ./modules/system/home.nix
+        ./modules/system/systempkgs.nix
+        ./modules/system/services.nix #Gotta give a look into this later
+        ./modules/system/flatpak.nix
+        ./modules/system/earlyoom.nix
+        ./modules/system/inputmethod.nix
+        ./modules/system/fonts.nix 
+        # Maybe use default isntead?
     ];
 
   boot.loader.systemd-boot.enable = true;
