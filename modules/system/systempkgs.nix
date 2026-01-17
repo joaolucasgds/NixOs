@@ -58,6 +58,7 @@
         "modrinth-app"
         "modrinth-app-unwrapped"
         "veracrypt"
+        "steam"
     ];
 
     # --- System Configured Programs ---
