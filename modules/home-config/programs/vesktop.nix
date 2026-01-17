@@ -2,7 +2,7 @@
 
 {
     programs.vesktop = {
-	enable = true;
+	    enable = true;
     };
 
     xdg.configFile."autostart/vesktop.desktop".text = ''
