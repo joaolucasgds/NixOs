@@ -27,7 +27,7 @@
         # supported GPUs is at: 
         # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
         # Only available from driver 515.43.04+
-        open = false; #Should test the open one at some point
+        open = true; #Should test the open one at some point
 
         # Enable the Nvidia settings menu,
         # accessible via `nvidia-settings`.
