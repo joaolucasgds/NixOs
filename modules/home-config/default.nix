@@ -3,12 +3,11 @@
 {
     imports = [
         #Core
-        ./homepkgs.nix
         ./dconf.nix
         ./xdg.nix
         ./wallpapers.nix
 
-        #Systemd services
+        #User systemd services
         ./services/gpu-screen-recorder.nix
 
         #Programs
