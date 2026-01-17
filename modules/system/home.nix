@@ -13,7 +13,6 @@
 
             imports = [ ../home-config ];
 
-            nixpkgs.config.allowUnfree = true;
             home.stateVersion = "25.11";
 
         };
