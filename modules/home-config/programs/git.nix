@@ -3,8 +3,12 @@
 {
     programs.git = {
 	    enable = true;
-	    userName = "Joao Lucas Gomes de Souza"; 
-	    userEmail = "joaolucasgdesouza@gmail.com";
+        settings = {
+            user = {
+                name = "Joao Lucas Gomes de Souza";
+                email = "joaolucasgdesouza@gmail.com";
+            };
+        };
     };
 }
 
