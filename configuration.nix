@@ -10,6 +10,7 @@
         ./modules/system/home.nix
         ./modules/system/systempkgs.nix
         ./modules/system/services.nix #Gotta give a look into this later
+        ./modules/system/firewall.nix
         ./modules/system/flatpak.nix
         ./modules/system/earlyoom.nix
         ./modules/system/inputmethod.nix
