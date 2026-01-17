@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
     programs.alacritty = {
@@ -8,10 +8,10 @@
                 opacity = 0.1;
                 blur = true;
                 decorations = "None";
-                padding = {
-                    x = 8;
-                    y = 8;
-                };
+                #padding = {
+                #x = 8;
+                #y = 8;
+                #};
             };
 
             font = {
