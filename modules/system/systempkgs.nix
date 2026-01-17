@@ -56,6 +56,7 @@
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
         "nvidia-x11"
         "modrinth-app"
+        "modrinth-app-unwrapped"
         "veracrypt"
     ];
 
