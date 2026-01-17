@@ -26,7 +26,7 @@
 
         # --- Media & Entertainment ---
         pear-desktop        # YouTube Music Client
-        # veracrypt         # Encryption tool (Commented out: build failure Jan 2026)
+        veracrypt           # Encryption tool (Commented out: build failure Jan 2026)
 
         # --- Terminal & Shell ---
         alacritty           # GPU-accelerated terminal
