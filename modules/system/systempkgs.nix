@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
     environment.systemPackages = with pkgs; [
@@ -51,6 +51,10 @@
         gnomeExtensions.brightness-control-using-ddcutil
         gnomeExtensions.do-not-disturb-while-screen-sharing-or-recording
         gnomeExtensions.focus-follows-workspace
+    ];
+
+    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+        "nvidia-x11"
     ];
 
     # --- System Configured Programs ---
