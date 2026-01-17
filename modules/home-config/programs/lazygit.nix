@@ -1,11 +1,11 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
     programs.lazygit = {
-	enable = true;
-	settings = {
-	    quitOnTopLevelReturn = true;
-	};
+	    enable = true;
+	    settings = {
+	        quitOnTopLevelReturn = true;
+	    };
     };
 }
 
