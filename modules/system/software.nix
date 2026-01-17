@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
+    import = [];
 
   environment.systemPackages = with pkgs; [
   	tree-sitter
