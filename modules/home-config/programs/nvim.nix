@@ -93,7 +93,7 @@
                     sectionSeparator = { left = ""; right = ""; };
                 };
     
-                vim.visuals.nvim-web-devicons.enable = true;
+                visuals.nvim-web-devicons.enable = true;
 
                 visuals.indent-blankline.enable = true;
 
