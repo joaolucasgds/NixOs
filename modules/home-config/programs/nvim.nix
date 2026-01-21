@@ -85,7 +85,7 @@
                         base0F = "#f3c0e5"; 
                     };
                 };
-                #forgot icons theme
+
                 statusline.lualine = {
                     enable = true;
                     theme = "base16";
