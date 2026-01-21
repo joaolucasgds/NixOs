@@ -3,19 +3,7 @@
 {
     imports = [
         ./hardware-configuration.nix
-        ./modules/system/secureboot.nix
-        ./modules/system/nvidia.nix
-
-        ./modules/system/gnome.nix
-        ./modules/system/home.nix
-        ./modules/system/systempkgs.nix
-        ./modules/system/services.nix #Gotta give a look into this later
-        ./modules/system/firewall.nix
-        ./modules/system/flatpak.nix
-        ./modules/system/earlyoom.nix
-        ./modules/system/inputmethod.nix
-        ./modules/system/fonts.nix 
-        # Maybe use default isntead?
+        ./modules/system
     ];
 
     boot.loader.systemd-boot.enable = true;
