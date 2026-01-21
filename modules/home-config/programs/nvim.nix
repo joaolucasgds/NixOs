@@ -92,6 +92,10 @@
                     componentSeparator = { left = ""; right = ""; };
                     sectionSeparator = { left = ""; right = ""; };
                 };
+    
+                vim.visuals.nvim-web-devicons.enable = true;
+
+                #visuals.indent-blankline.enable = true;
 
                 presence.neocord.enable = true;
 
