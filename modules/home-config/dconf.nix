@@ -147,38 +147,38 @@
             binding = "<Control><Alt>j";
         };
 
-	# Youtube Music
+	    # Youtube Music
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9" = {
-	    name = "Youtube Music";
-	    command = "youtube-music";
-	    binding = "<Control><Alt>m";
-	};
+	        name = "Youtube Music";
+	        command = "youtube-music";
+	        binding = "<Control><Alt>m";
+	    };
 
-	# Decrease Brightness
+	    # Decrease Brightness
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10" = {
-	    name = "Decrease Brightness";
-	    command = "bruh - 10";
-	    binding = "<Control><Alt>KP_Subtract";
-	};
+            name = "Decrease Brightness";
+            command = "bruh - 10";
+            binding = "<Control><Alt>KP_Subtract";
+	    };
 
-	# Increase Brightness
+	    # Increase Brightness
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11" = {
-	    name = "Increase Brightness";
-	    command = "bruh + 10";
-	    binding = "<Control><Alt>KP_Add";
-	};
+            name = "Increase Brightness";
+            command = "bruh + 10";
+            binding = "<Control><Alt>KP_Add";
+	    };
 
-        # GNOME CORE & INTERFACE
+            # GNOME CORE & INTERFACE
 
-	# Enable The Correct Input Sources
-	"org/gnome/desktop/input-sources" = {
-	    sources = [
-		# The tuple format is [ "TYPE" "VALUE" ]
-		(lib.hm.gvariant.mkTuple [ "xkb" "br" ])      # Portuguese (Brazil)
-		(lib.hm.gvariant.mkTuple [ "ibus" "mozc-on" ]) # Japanese (Mozc)
-	    ];
-	    per-window = false; 
-	};
+	    # Enable The Correct Input Sources
+	    "org/gnome/desktop/input-sources" = {
+            sources = [
+            # The tuple format is [ "TYPE" "VALUE" ]
+            (lib.hm.gvariant.mkTuple [ "xkb" "br" ])      # Portuguese (Brazil)
+            (lib.hm.gvariant.mkTuple [ "ibus" "mozc-on" ]) # Japanese (Mozc)
+            ];
+            per-window = false; 
+	    };
 
         # Search Provider Order (Calculator First)
         "org/gnome/desktop/search-providers" = {
@@ -201,11 +201,11 @@
             clock-format = "12h";
         };
 
-	# Auto Select Wallpaper
-	"org/gnome/desktop/background" = {
-	    picture-uri = "file:///home/jl/.local/share/backgrounds/lucyna.png";
-	    picture-uri-dark = "file:///home/jl/.local/share/backgrounds/lucyna.png";
-	};
+	    # Auto Select Wallpaper
+	    "org/gnome/desktop/background" = {
+	        picture-uri = "file:///home/jl/.local/share/backgrounds/lucyna.png";
+	        picture-uri-dark = "file:///home/jl/.local/share/backgrounds/lucyna.png";
+	    };
 
     };
 }
