@@ -21,7 +21,6 @@
         brave               # Browser
         vesktop             # Custom Discord client
         proton-pass         # Password manager
-        protonmail-desktop  # Email client
         protonvpn-gui       # VPN Client
         deluge-gtk          # Torrent client
 
