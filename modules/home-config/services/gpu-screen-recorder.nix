@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   systemd.user.services."gpu-screen-recorder-ui" = {
