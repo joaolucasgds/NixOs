@@ -6,29 +6,21 @@
         ./modules/system
     ];
 
-    boot.loader.efi.canTouchEfiVariables = true;
-
-    boot.kernelPackages = pkgs.linuxPackages_zen;
-
+    # Host indentity
     networking.hostName = "NixOs"; 
-
     networking.networkmanager.enable = true;
 
-    # Enable CUPS to print documents.
-    services.printing.enable = false;
+    boot.kernelPackages = pkgs.linuxPackages_zen;
+    boot.loader.efi.canTouchEfiVariables = true;
 
-    #Needed for ddcutil
+    #i2c needed for ddcutil, cups disabled
     hardware.i2c.enable = true;
-
-    users.users.root = {
-        initialPassword = "123"; #Set up actual passwords on install
-    };
+    services.printing.enable = false;
 
     security.sudo.extraConfig = ''
         Defaults rootpw
     '';
 
-    system.stateVersion = "26.05"; # Did you read the comment?
-    documentation.nixos.enable = false;
+    system.stateVersion = "26.05";
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
