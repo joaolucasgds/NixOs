@@ -30,6 +30,7 @@
                     "<leader>fh" = { action = ":Telescope help_tags<CR>";  desc = "Help Tags"; };
                     "<leader>fd" = { action = ":Telescope diagnostics<CR>"; desc = "Find Diagnostics"; };
                     "<leader>e"  = { action = ":lua vim.diagnostic.open_float()<CR>"; desc = "Show Line Diagnostics"; };
+                    "<leader>fv" = { action = ":Telescope file_browser path=%:p:h select_buffer=true<CR>"; desc = "File Browser"; };
                 };
             
                 # --- Helper Plugins --- #
@@ -55,8 +56,15 @@
 
                     extensions = [
                         {
-                            name = "telescope-file-browser";
-                            packages = [pkgs.vimPlugins.telescope-file-browser-nvim];
+                            name = "file_browser";
+                            packages = [ pkgs.vimPlugins.telescope-file-browser-nvim ];
+
+                            setup = {
+                                file_browser = {
+                                    theme = "ivy";        # Makes it open as a bottom drawer 
+                                    hijack_netrw = true;
+                                };
+                            };
                         }
                     ];
                 };
