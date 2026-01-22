@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
     imports = [ inputs.nvf.homeManagerModules.nvf ];
@@ -52,6 +52,13 @@
                             selection_caret = " ";
                         };
                     };
+
+                    extensions = [
+                        {
+                            name = "telescope-file-browser";
+                            packages = [pkgs.vimPlugins.telescope-file-browser-nvim];
+                        }
+                    ];
                 };
             
                 #test harpoon soon
