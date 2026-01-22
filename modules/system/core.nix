@@ -28,5 +28,7 @@
         alsa.support32Bit = true;
         pulse.enable = true;
     };
+
+    documentation.nixos.enable = false;
 }
 
