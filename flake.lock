@@ -258,7 +258,8 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
-        "wallpapers": "wallpapers"
+        "wallpapers": "wallpapers",
+        "zen-browser": "zen-browser"
       }
     },
     "rust-overlay": {
@@ -312,6 +313,29 @@
         "ref": "main",
         "type": "git",
         "url": "https://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@github.com/JoaoLucasGdS/Wallpapers.git"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1769059766,
+        "narHash": "sha256-u95Qe60mF3eoEqrd0tIej4A8TDWoc/N4ZjZ60npplgw=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "dc0483a6e3ff1ffb04ad77d26c1a4458f4cf82d6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "type": "github"
       }
     }
   },
