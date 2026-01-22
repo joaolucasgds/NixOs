@@ -12,21 +12,7 @@
 
     networking.hostName = "NixOs"; 
 
-    # Enable networking
     networking.networkmanager.enable = true;
-    # Configure network proxy if necessary
-    # networking.proxy.default = "http://user:password@proxy:port/";
-    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-    # Enable the X11 windowing system.
-    services.xserver.enable = true;
-    services.xserver.excludePackages = [ pkgs.xterm ];
-
-    # Configure keymap in X11
-    services.xserver.xkb = {
-        layout = "br";
-        variant = "";
-    };
 
     # Enable CUPS to print documents.
     services.printing.enable = false;
