@@ -12,6 +12,7 @@
         ./services.nix
         ./firewall.nix
         ./garbage-collection.nix
+        ./core.nix
         ./systempkgs.nix
 
         ./nvidia.nix
