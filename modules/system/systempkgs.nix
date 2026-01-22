@@ -35,6 +35,7 @@
         # --- Gaming ---
         jdk25               # Java for Minecraft
         modrinth-app        # Minecraft Mod Loader
+        hydralauncher
 
         # --- GNOME Extensions ---
         gnomeExtensions.blur-my-shell
