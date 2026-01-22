@@ -3,7 +3,12 @@
 {
     imports = [ inputs.home-manager.nixosModules.home-manager ];
 
-    users.users.jl.isNormalUser = true;
+    users.users.jl = {
+        isNormalUser = true;
+        description = "João Lucas";
+        extraGroups = [ "networkmanager" "wheel" "i2c" ];
+        initialPassword = "123";
+    };
 
     home-manager = {
 
