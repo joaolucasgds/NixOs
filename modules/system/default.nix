@@ -6,7 +6,6 @@
         ./flatpak.nix
         ./home.nix
         ./secureboot.nix
-        ./earlyoom.nix
         ./fonts.nix
         ./inputmethod.nix
         ./services.nix
