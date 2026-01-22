@@ -13,9 +13,8 @@
     boot.kernelPackages = pkgs.linuxPackages_zen;
     boot.loader.efi.canTouchEfiVariables = true;
 
-    #i2c needed for ddcutil, cups disabled
+    #i2c needed for ddcutil
     hardware.i2c.enable = true;
-    services.printing.enable = false;
 
     system.stateVersion = "26.05";
 }
