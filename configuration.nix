@@ -17,9 +17,5 @@
     hardware.i2c.enable = true;
     services.printing.enable = false;
 
-    security.sudo.extraConfig = ''
-        Defaults rootpw
-    '';
-
     system.stateVersion = "26.05";
 }

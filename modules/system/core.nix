@@ -29,6 +29,11 @@
         pulse.enable = true;
     };
 
+    # Make sudo ask for rootpw
+    security.sudo.extraConfig = ''
+        Defaults rootpw
+    '';
+
     documentation.nixos.enable = false;
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
