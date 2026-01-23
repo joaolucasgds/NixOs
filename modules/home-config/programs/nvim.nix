@@ -45,6 +45,10 @@
                     lua.enable = true;
                 };
 
+                treesitter = {
+                    context.enable = true; #Gotta test this a little more
+                };
+
                 telescope = {
                     enable = true;
                     setupOpts = {
