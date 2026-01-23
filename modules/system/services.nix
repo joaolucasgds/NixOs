@@ -21,5 +21,13 @@
 
     # Printing (Disabled for now)
     services.printing.enable = false;
+
+    #sched_ext
+    services.scx = {
+        enable = true;
+        scheduler = "scx_lavd";
+
+        extraArgs = [ "--performance" ];
+    };
 }
 
