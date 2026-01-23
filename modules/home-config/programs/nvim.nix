@@ -110,7 +110,12 @@
     
                 visuals.nvim-web-devicons.enable = true;
 
-                visuals.indent-blankline.enable = true;
+                visuals.indent-blankline = {
+                    enable = true;
+                    setupOpts = {
+                        scope.enabled = true; #Should be working? but it isnt??? gotta test other languages first
+                    };
+                };
 
                 presence.neocord.enable = true;
 
