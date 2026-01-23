@@ -113,7 +113,7 @@
                 visuals.indent-blankline = {
                     enable = true;
                     setupOpts = {
-                        scope.enabled = true; #Should be working? but it isnt??? gotta test other languages first
+                        scope.enabled = true;
                     };
                 };
 
