@@ -13,7 +13,6 @@
 
         packages = [
             # --- Browsing & Media ---
-            "app.zen_browser.zen"
             "io.freetubeapp.FreeTube"
             "com.github.iwalton3.jellyfin-media-player"
 
@@ -22,10 +21,8 @@
             "app.drey.Warp"
 	        "dev.bragefuglseth.Keypunch"
 	        "org.gnome.Boxes"
-            "net.nokyan.Resources"
 
             # --- Gaming ---
-            "com.heroicgameslauncher.hgl"
             "org.vinegarhq.Sober"
         ];
     };
