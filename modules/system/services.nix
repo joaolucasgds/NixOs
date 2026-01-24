@@ -22,12 +22,6 @@
     # Printing (Disabled for now)
     services.printing.enable = false;
 
-    #sched_ext
-    services.scx = {
-        enable = true;
-        scheduler = "scx_lavd";
-
-        extraArgs = [ "--performance" ];
-    };
+    #sched_ext maybe i will try this again someday
 }
 
