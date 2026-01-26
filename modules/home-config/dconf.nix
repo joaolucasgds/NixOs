@@ -93,7 +93,7 @@
         # Browser
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
             name = "Browser";
-            command = "flatpak run app.zen_browser.zen";
+            command = "zen";
             binding = "<Control><Alt>n";
         };
 
