@@ -16,7 +16,6 @@
                 dynamic-panel.extensionUuid
                 gamebar-overlay.extensionUuid
                 hide-top-bar.extensionUuid
-                hide-the-dock-in-overview.extensionUuid
                 search-light.extensionUuid
                 brightness-control-using-ddcutil.extensionUuid
                 do-not-disturb-while-screen-sharing-or-recording.extensionUuid

@@ -47,7 +47,6 @@
         gnomeExtensions.dynamic-panel
         gnomeExtensions.gamebar-overlay
         gnomeExtensions.hide-top-bar
-        gnomeExtensions.hide-the-dock-in-overview
         gnomeExtensions.search-light
         gnomeExtensions.brightness-control-using-ddcutil
         gnomeExtensions.do-not-disturb-while-screen-sharing-or-recording
