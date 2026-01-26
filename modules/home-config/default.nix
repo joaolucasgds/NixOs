@@ -20,6 +20,7 @@
         ./programs/nvim.nix
         ./programs/vesktop.nix
         ./programs/bruh.nix
+        ./programs/zen-browser.nix
     ];
 }
 
