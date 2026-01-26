@@ -8,6 +8,7 @@
         ./wallpapers.nix
 
         #User systemd services
+        ./services/cleanhome.nix
         ./services/gpu-screen-recorder.nix
 
         #Programs
