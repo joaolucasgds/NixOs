@@ -13,7 +13,7 @@
             # -mindepth 1: Don't delete the "Downloads" folder itself
             # -mtime +7:  Check ONLY if 'Modified' > 7 days ago (Ignores Access Time)
             # -exec rm -rf: Forcefully cut the neck of anything found
-            ExecStart = "${pkgs.findutils}/bin/find -P %h/Downloads -xdev -maxdepth 1 -mindepth 1 -mtime +7 -exec rm -rf -- {} +";
+            ExecStart = "${pkgs.findutils}/bin/find -P %h/Downloads -xdev -maxdepth 1 -mindepth 1 -mtime +7 -exec ${pkgs.coreutils}/bin/rm -rf -- {} +";
 
             NoNewPrivileges = true;
             PrivateTmp = true;
