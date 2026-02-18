@@ -9,6 +9,7 @@
                 email = "joaolucasgdesouza@gmail.com";
             };
         };
+        signing.signByDefault = true;
     };
 }
 
