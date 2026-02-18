@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
     programs.git = {
@@ -9,7 +9,17 @@
                 email = "joaolucasgdesouza@gmail.com";
             };
         };
-        signing.signByDefault = true;
+
+        signing = {
+            key = "~/.ssh/github-signing.pub";
+            signByDefault = true;
+        };
+
+        extraConfig = {
+            gpg.format = "ssh";
+            "gpg \"ssh\"".program = "${pkgs.openssh}/bin/ssh-keygen"; # Explicitly use the SSH binary
+        };
+
     };
 }
 
