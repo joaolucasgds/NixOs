@@ -6,7 +6,7 @@
     users.users.jl = {
         isNormalUser = true;
         description = "João Lucas";
-        extraGroups = [ "networkmanager" "wheel" "i2c" ];
+        extraGroups = [ "networkmanager" "wheel" "i2c" "libvirtd" ];
         initialPassword = "123";
     };
 

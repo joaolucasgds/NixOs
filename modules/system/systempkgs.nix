@@ -17,6 +17,8 @@
         fd                  # Fast file finder (better find)
         neovim              # Text editor
         android-studio
+        virt-manager
+        qemu
 
         # --- Internet & Communication ---
         brave               # Browser
