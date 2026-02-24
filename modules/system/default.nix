@@ -13,6 +13,7 @@
         ./garbage-collection.nix
         ./core.nix
         ./systempkgs.nix
+        ./vm.nix
 
         ./nvidia.nix
     ];
