@@ -16,6 +16,7 @@
         ripgrep             # Fast search tool (better grep)
         fd                  # Fast file finder (better find)
         neovim              # Text editor
+        android-studio
 
         # --- Internet & Communication ---
         brave               # Browser
@@ -63,6 +64,8 @@
 
         "steam"
         "steam-unwrapped"
+
+        "android-studio-stable"
     ];
 
     # --- System Configured Programs ---
