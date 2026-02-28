@@ -23,6 +23,7 @@
 
             # --- Gaming ---
             "org.vinegarhq.Sober"
+            "com.heroicgameslauncher.hgl"
         ];
     };
 }
