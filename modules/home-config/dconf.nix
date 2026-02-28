@@ -157,14 +157,14 @@
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10" = {
             name = "Decrease Brightness";
             command = "bruh - 10";
-            binding = "<Control><Alt>KP_Subtract";
+            binding = "<Control><Alt>Page_Down";
 	    };
 
 	    # Increase Brightness
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom11" = {
             name = "Increase Brightness";
             command = "bruh + 10";
-            binding = "<Control><Alt>KP_Add";
+            binding = "<Control><Alt>Page_Up";
 	    };
 
             # GNOME CORE & INTERFACE
