@@ -68,7 +68,7 @@
         "steam"
         "steam-unwrapped"
 
-        "android-studio-stable"
+        "android-studio"
     ];
 
     # --- System Configured Programs ---
