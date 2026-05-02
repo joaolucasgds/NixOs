@@ -37,14 +37,14 @@
     };
 
     outputs = { self, nixpkgs, ... }@inputs: {
-
-        "loq" = nixpkgs.lib.nixosSystem{
-            system = "x86_64-linux";
-            specialArgs = { inherit inputs; };
-            modules = [
-                ./hosts/loq/configuration.nix
-            ];
+        nixosConfigurations = {
+            "loq" = nixpkgs.lib.nixosSystem{
+                system = "x86_64-linux";
+                specialArgs = { inherit inputs; };
+                modules = [
+                    ./hosts/loq/configuration.nix
+                ];
+            };
         };
-
     };
 }
