@@ -43,6 +43,7 @@
                     rust.enable = true;
                     clang.enable = true;
                     lua.enable = true;
+                    java.enable = true;
                 };
 
                 treesitter = {
