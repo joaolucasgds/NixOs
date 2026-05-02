@@ -17,6 +17,7 @@
         fd                  # Fast file finder (better find)
         neovim              # Text editor
         android-studio
+        gradle
         virt-manager
         qemu
 
