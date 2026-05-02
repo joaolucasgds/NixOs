@@ -15,7 +15,7 @@
         ./systempkgs.nix
         ./vm.nix
 
-        ./nvidia.nix
+        ./nvidia.nix#Waiting for the day i can comment this out
     ];
 }
 
