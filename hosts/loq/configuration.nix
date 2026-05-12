@@ -4,6 +4,10 @@
     imports = [
         ./hardware-configuration.nix
         ../../modules/system
+
+        #hyprland 
+        ../../modules/hyprland/hyprland.nix
+        ../../modules/hyprland/pkgs.nix
     ];
 
     # Host indentity
