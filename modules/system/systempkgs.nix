@@ -11,11 +11,8 @@
         wl-clipboard        # Command line clipboard (Wayland)
 
         # --- Development & Git ---
-        git
-        lazygit             # Terminal UI for git
         ripgrep             # Fast search tool (better grep)
         fd                  # Fast file finder (better find)
-        neovim              # Text editor
         android-studio
         gradle
         virt-manager
@@ -23,7 +20,6 @@
 
         # --- Internet & Communication ---
         brave               # Browser
-        vesktop             # Custom Discord client
         proton-pass         # Password manager
         protonvpn-gui       # VPN Client
         deluge-gtk          # Torrent client
@@ -32,9 +28,6 @@
         pear-desktop        # YouTube Music Client
         veracrypt           # Encryption tool (Commented out: build failure Jan 2026)
 
-        # --- Terminal & Shell ---
-        alacritty           # GPU-accelerated terminal
-        fastfetch           # System info fetcher
 
         # --- Gaming ---
         jdk25               # Java for Minecraft
