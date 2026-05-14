@@ -11,8 +11,6 @@
             onCalendar = "weekly";
         };
 
-        uninstallUnmanaged = true;
-
         packages = [
             # --- Browsing & Media ---
             "io.freetubeapp.FreeTube"
