@@ -19,16 +19,6 @@
         ];
     };
 
-    services.greetd = {
-        enable = true;
-        settings = {
-            default_session = {
-                command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd 'uwsm start hyprland-uwsm.desktop'";
-                user = "greeter";
-            };
-        };
-    };
-
     # Printing (Disabled for now)
     services.printing.enable = false;
 
