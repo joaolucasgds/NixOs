@@ -10,6 +10,8 @@
         tree                # Directory visualization
         wl-clipboard        # Command line clipboard (Wayland)
         fastfetch
+        p7zip  # Required by Yazi for almost all archive operations
+        unzip
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
@@ -18,7 +20,6 @@
         gradle
         virt-manager
         qemu
-        yazi
 
         # --- Internet & Communication ---
         brave               # Browser
