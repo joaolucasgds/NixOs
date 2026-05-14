@@ -33,7 +33,7 @@
             dynamic-opacity = false;
             enable-all = false;
             sigma = 10;
-            whitelist = [ "Alacritty" ];
+            whitelist = [ "kitty" ];
         };
 
         "org/gnome/shell/extensions/clipboard-indicator" = {
@@ -86,7 +86,7 @@
         # Terminal
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
             name = "Terminal";
-            command = "alacritty";
+            command = "kitty";
             binding = "<Control><Alt>t";
         };
 
