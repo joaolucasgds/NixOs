@@ -9,6 +9,7 @@
         ffmpeg              # Multimedia processing
         tree                # Directory visualization
         wl-clipboard        # Command line clipboard (Wayland)
+        fastfetch
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
@@ -17,6 +18,7 @@
         gradle
         virt-manager
         qemu
+        yazi
 
         # --- Internet & Communication ---
         brave               # Browser
@@ -32,7 +34,6 @@
         # --- Gaming ---
         jdk25               # Java for Minecraft
         modrinth-app        # Minecraft Mod Loader
-        hydralauncher
 
         # --- GNOME Extensions ---
         gnomeExtensions.blur-my-shell
@@ -79,4 +80,6 @@
     programs.steam = {
         enable = true;
     };
+
+    programs.kdeconnect.enable = true;
 }
