@@ -8,6 +8,7 @@
         ./hyprland-home/theming.nix
 
         ./programs/hyprshot.nix
+        ./programs/yazi.nix
         
         ./services/kdeconnect.nix
         ./services/dmsSettings.nix
