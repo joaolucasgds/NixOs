@@ -1,18 +1,11 @@
-{ ... }:
+{ hostvars, lib, ... }:
 
-{
-    imports = [
+let
+    coreHome = [
         #Core
-        ./dconf.nix
         ./xdg.nix
         ./wallpapers.nix
-
-        #User systemd services
-        ./services/cleanhome.nix
-        ./services/gpu-screen-recorder.nix
-        ./services/kdeconnect.nix
-        ./services/vesktop.nix
-
+        ./fcitx5.nix
         #Programs
         ./programs/alacritty.nix
         ./programs/bash.nix
@@ -23,20 +16,21 @@
         ./programs/vesktop.nix
         ./programs/bruh.nix
         ./programs/zen-browser.nix
-
-        #hyprland
-        ./hyprland.nix
-
-        #dms
-        ./DankMaterialShell.nix
-        ./services/dmsSettings.nix
-
-        #input
-        ./fcitx5.nix
-        
-        #theming
-        ./theming.nix
-
+        #User systemd services
+        ./services/cleanhome.nix
+        ./services/gpu-screen-recorder.nix
+        ./services/vesktop.nix
     ];
+
+    hyprlandHome = lib.optionals (hostvars.desktop == "hyprland") [
+        ./hyprland-home.nix
+    ];
+
+    gnomeHome = lib.optionals (hostvars.desktop == "gnome") [
+        ./gnome-home.nix
+    ];
+in
+{
+    imports = coreHome ++ hyprlandHome ++ gnomeHome;
 }
 
