@@ -10,6 +10,7 @@ let
         # ./programs/alacritty.nix
         ./programs/kitty.nix
 
+        ./programs/tmux.nix
         ./programs/bash.nix
         ./programs/git.nix
         ./programs/lazygit.nix
