@@ -4,5 +4,8 @@
 
     defaultMonitorModel = "0x1552";
     defaultMonitorSerial = ""; #Serial is empty
+
+    desktop = "hyprland";
 }
+
 
