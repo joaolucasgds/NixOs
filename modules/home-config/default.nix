@@ -3,9 +3,9 @@
 let
     coreHome = [
         #Core
-        ./xdg.nix
-        ./wallpapers.nix
-        ./fcitx5.nix
+        ./default/xdg.nix
+        ./default/wallpapers.nix
+        ./default/fcitx5.nix
         #Programs
         ./programs/alacritty.nix
         ./programs/bash.nix
@@ -15,6 +15,8 @@ let
         ./programs/vesktop.nix
         ./programs/bruh.nix
         ./programs/zen-browser.nix
+        #Flatpak settings
+        ./flatpak-settings/gpu-screen-recorder-ui-flatpak.nix
         #User systemd services
         ./services/cleanhome.nix
         ./services/gpu-screen-recorder.nix
