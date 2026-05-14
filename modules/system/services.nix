@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
     # Firmware updates
@@ -17,6 +17,16 @@
             "--avoid"
             "^(steam|gamescope|java|minecraft|nvim|neovim)$"
         ];
+    };
+
+    services.greetd = {
+        enable = true;
+        settings = {
+            default_session = {
+                command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd 'uwsm start hyprland-uwsm.desktop'";
+                user = "greeter";
+            };
+        };
     };
 
     # Printing (Disabled for now)
