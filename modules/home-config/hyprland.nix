@@ -9,6 +9,7 @@ in
     wayland.windowManager.hyprland = {
         enable = true;
         package = null; # installed as a systempkg, null here to prevent duplicate
+        configType = "hyprlang";
 
         settings = {
             monitor = ", highrr, auto, 1";
