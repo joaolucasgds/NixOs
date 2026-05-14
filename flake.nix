@@ -45,17 +45,12 @@
         nixosConfigurations = {
             "loq" = nixpkgs.lib.nixosSystem{
                 system = "x86_64-linux";
-                specialArgs = { inherit inputs; };
+                specialArgs = { 
+                    inherit inputs;
+                    hostvars = import ./hosts/loq/variables.nix;
+                };
                 modules = [
                     ./hosts/loq/configuration.nix
-                    
-                    inputs.home-manager.nixosModules.home-manager
-
-                    {
-                        home-manager.extraSpecialArgs = { 
-                            hostvars = import ./hosts/loq/variables.nix; 
-                        };
-                    }
                 ];
             };
         };
