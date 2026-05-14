@@ -77,7 +77,7 @@
                 clipboard = {
                     enable = true;
                     providers.wl-copy.enable = true;
-                    register = "unnamedplus";
+                    registers = "unnamedplus";
                 };
             
                 #test harpoon soon
