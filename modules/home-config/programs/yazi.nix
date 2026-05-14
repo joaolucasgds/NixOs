@@ -24,5 +24,14 @@
                 ];
             };
         };
+
+        theme = {
+            filetype = {
+                rules = [
+                    { mime = "inode/directory"; fg = "gray"; }
+                    # { mime = "inode/directory"; fg = "#8a8a8a"; } 
+                ];
+            };
+        };
     };
 }
