@@ -23,7 +23,7 @@
         # --- Internet & Communication ---
         brave               # Browser
         proton-pass         # Password manager
-        protonvpn-gui       # VPN Client
+        proton-vpn           # VPN Client
         deluge-gtk          # Torrent client
 
         # --- Media & Entertainment ---
