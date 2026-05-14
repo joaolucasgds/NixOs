@@ -34,6 +34,11 @@
                 home-manager.follows = "home-manager";
             };
         };
+
+        dms = {
+            url = "github:AvengeMedia/DankMaterialShell/stable";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = { self, nixpkgs, ... }@inputs: {
@@ -43,6 +48,14 @@
                 specialArgs = { inherit inputs; };
                 modules = [
                     ./hosts/loq/configuration.nix
+                    
+                    inputs.home-manager.nixosModules.home-manager
+
+                    {
+                        home-manager.extraSpecialArgs = { 
+                            hostvars = import ./hosts/loq/variables.nix; 
+                        };
+                    }
                 ];
             };
         };
