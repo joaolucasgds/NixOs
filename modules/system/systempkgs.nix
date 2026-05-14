@@ -30,18 +30,10 @@
         pear-desktop        # YouTube Music Client
         veracrypt           # Encryption tool (Commented out: build failure Jan 2026)
 
-
-        # --- Gaming ---
-        jdk25               # Java for Minecraft
-        modrinth-app        # Minecraft Mod Loader
-
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
         "nvidia-x11"
-
-        "modrinth-app"
-        "modrinth-app-unwrapped"
 
         "veracrypt"
 

@@ -26,6 +26,7 @@
             # --- Gaming ---
             "org.vinegarhq.Sober"
             "com.heroicgameslauncher.hgl"
+            "com.modrinth.ModrinthApp"
         ];
     };
 }
