@@ -3,6 +3,7 @@
 {
     imports = [
 
+        ./home.nix
         ./flatpak.nix
         ./secureboot.nix
         ./fonts.nix

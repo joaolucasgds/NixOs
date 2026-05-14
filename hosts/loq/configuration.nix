@@ -3,7 +3,6 @@
 let
     hardwareModule = [ ./hardware-configuration.nix ];
     systemModule = [ ../../modules/system ];
-    homeModule = [ ../../modules/home-config ];
     deModule = lib.optionals (hostvars.desktop == "hyprland") [
         ../../modules/hyprland
     ] ++ lib.optionals (hostvars.desktop == "gnome") [
@@ -12,7 +11,7 @@ let
 in
 
 {
-    imports = hardwareModule ++ systemModule ++ homeModule ++ deModule;
+    imports = hardwareModule ++ systemModule ++ deModule;
 
     # Host indentity
     networking.hostName = "NixOs"; 
