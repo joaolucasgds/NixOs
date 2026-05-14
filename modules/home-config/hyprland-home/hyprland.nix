@@ -24,8 +24,6 @@ in
                 "$mainMod, Q, exec, dms ipc call bar reveal index 0" #also revel bar
                 "$mainMod, T, exec, $terminal"
                 "$mainMod, N, exec, zen-beta"
-                "$mainMod SHIFT, minus, exec, bruh - 10"
-                "$mainMod SHIFT, equal, exec, bruh + 10"
                 "$mainMod, D, exec, vesktop"
                 "$mainMod, F, exec, nautilus"
                 "$mainMod, P, exec, proton-pass"
@@ -34,6 +32,9 @@ in
                 "$mainMod, S, exec, dms ipc call settings toggle"
                 "$mainMod, Z, exec, dms ipc call bar toggle index 0"
                 "$mainMod, W, exec, dms ipc wallpaperCarousel toggle"
+                "$mainMod SHIFT, minus, exec, bruh - 10"
+                "$mainMod SHIFT, equal, exec, bruh + 10"
+                "$mainMod SHIFT, S, exec, hyprshot --m region"
                 
                 # --- Window Management ---
             
