@@ -9,6 +9,7 @@
 
         ./programs/hyprshot.nix
         ./programs/yazi.nix
+        ./programs/mpv.nix
         
         ./services/kdeconnect.nix
         ./services/dmsSettings.nix
