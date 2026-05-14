@@ -2,9 +2,8 @@
 
 {
     imports = [
-        ./de.nix
+
         ./flatpak.nix
-        ./home.nix
         ./secureboot.nix
         ./fonts.nix
         ./inputmethod.nix
