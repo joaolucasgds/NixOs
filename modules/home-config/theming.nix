@@ -16,6 +16,7 @@
 
     home.packages = [
         pkgs.adw-gtk3 
+        pkgs.adwaita-icon-theme
     ];
 
 }
