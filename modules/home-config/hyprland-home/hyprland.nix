@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, hostvars, ... }:
 
 let
     masterWallpaperDir = "/home/jl/Pictures/Wallpapers";
@@ -13,6 +13,11 @@ in
 
         settings = {
             monitor = ", highrr, auto, 1";
+
+            workspace = [
+                "1, monitor:desc:${hostvars.defaultMonitorModel}, default:true"
+                "2, monitor:desc:${hostvars.primaryMonitorModel}, default:true"
+            ];
 
             "$terminal" = "kitty";
             "$mainMod" = "SUPER";
