@@ -28,15 +28,12 @@
         theme = {
             filetype = {
                 rules = [
-                    { 
-                        # "name = "*/" is a more reliable way to target directories in Yazi
-                        name = "*/"; 
-                        style = { fg = "#8a8a8a"; }; 
-                    }
-                    { 
-                        mime = "inode/directory"; 
-                        style = { fg = "#8a8a8a"; }; 
-                    }
+                    # 1. Use 'url = "*/"' to catch all directories
+                    # 2. Put 'fg' at the top level (no nested style block)
+                    { url = "*/"; fg = "#8a8a8a"; }
+                    
+                    # also keep the mime rule just to be perfectly safe
+                    { mime = "inode/directory"; fg = "#8a8a8a"; }
                 ];
             };
         };
