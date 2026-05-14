@@ -10,6 +10,8 @@
         #User systemd services
         ./services/cleanhome.nix
         ./services/gpu-screen-recorder.nix
+        ./services/kdeconnect.nix
+        ./services/vesktop.nix
 
         #Programs
         ./programs/alacritty.nix
@@ -21,6 +23,20 @@
         ./programs/vesktop.nix
         ./programs/bruh.nix
         ./programs/zen-browser.nix
+
+        #hyprland
+        ./hyprland.nix
+
+        #dms
+        ./DankMaterialShell.nix
+        ./services/dmsSettings.nix
+
+        #input
+        ./fcitx5.nix
+        
+        #theming
+        ./theming.nix
+
     ];
 }
 
