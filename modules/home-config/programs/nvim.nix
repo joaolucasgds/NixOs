@@ -73,6 +73,12 @@
                         }
                     ];
                 };
+
+                clipboard = {
+                    enable = true;
+                    providers.wl-copy.enable = true;
+                    register = "unnamedplus";
+                };
             
                 #test harpoon soon
                 autocomplete.blink-cmp.enable = true;
