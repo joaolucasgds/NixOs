@@ -26,14 +26,19 @@
         };
 
         theme = {
-            filetype = {
-                rules = [
-                    # 1. Use 'url = "*/"' to catch all directories
-                    # 2. Put 'fg' at the top level (no nested style block)
-                    { url = "*/"; fg = "#8a8a8a"; }
-                    
-                    # also keep the mime rule just to be perfectly safe
-                    { mime = "inode/directory"; fg = "#8a8a8a"; }
+            icon = {
+                prepend_dirs = [
+                    { name = "Documents"; text = ""; fg = "#8a8a8a"; }
+                    { name = "Downloads"; text = ""; fg = "#8a8a8a"; }
+                    { name = "Pictures";  text = ""; fg = "#8a8a8a"; }
+                    { name = "Public";    text = ""; fg = "#8a8a8a"; }
+                    { name = "Music";     text = ""; fg = "#8a8a8a"; }
+                    { name = "Videos";    text = ""; fg = "#8a8a8a"; }
+                    { name = "Projects";  text = "󰏗"; fg = "#8a8a8a"; }
+                ];
+                
+                prepend_conds = [
+                    { "if" = "dir"; text = ""; fg = "#8a8a8a"; }
                 ];
             };
         };
