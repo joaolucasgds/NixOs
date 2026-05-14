@@ -7,4 +7,7 @@
     ];
 
     programs.kdeconnect.enable = true;
+    programs.mpv = {
+        enable = true;
+    };
 }
