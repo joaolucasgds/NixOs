@@ -1,14 +1,18 @@
-{ pkgs, ... }:
+{ pkgs, hostvars, lib, ... }:
+
+let
+    hardwareModule = [ ./hardware-configuration.nix ];
+    systemModule = [ ../../modules/system ];
+    homeModule = [ ../../modules/home-config ];
+    deModule = lib.optionals (hostvars.desktop == "hyprland") [
+        ../../modules/hyprland
+    ] ++ lib.optionals (hostvars.desktop == "gnome") [
+        ../../modules/gnome
+    ];
+in
 
 {
-    imports = [
-        ./hardware-configuration.nix
-        ../../modules/system
-
-        #hyprland 
-        ../../modules/hyprland/hyprland.nix
-        ../../modules/hyprland/pkgs.nix
-    ];
+    imports = hardwareModule ++ systemModule ++ homeModule ++ deModule;
 
     # Host indentity
     networking.hostName = "NixOs"; 
