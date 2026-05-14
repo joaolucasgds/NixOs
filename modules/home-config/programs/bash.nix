@@ -21,7 +21,7 @@
             }
             
             lazygit() {
-                ssh-add -l >/dev/null 2>&1 || eval "$(keychain --eval --quiet ~/.ssh/id_ed25519)"
+                ssh-add -l >/dev/null 2>&1 || eval "$(keychain --eval --quiet ~/.ssh/github-signing)"
                 command lazygit "$@"
             }
         '';
