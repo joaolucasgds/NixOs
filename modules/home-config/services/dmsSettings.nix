@@ -115,8 +115,8 @@ in
             ReadWritePaths = [ "%h/.config/DankMaterialShell" ];
 
             ExecStart = "${pkgs.writeShellScript "dms-inject" ''
-                TARGET_MODEL="${hostvars.primaryMonitorModel}"
-                DEFAULT_MODEL="${hostvars.defaultMonitorModel}"
+                TARGET_MODEL="${hostvars.DMSprimaryMonitorModel}"
+                DEFAULT_MODEL="${hostvars.DMSdefaultMonitorModel}"
                 
                 TEMPLATE="$HOME/.config/DankMaterialShell/settings-template.json"
                 REAL_SETTINGS="$HOME/.config/DankMaterialShell/settings.json"
