@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 let
     masterWallpaperDir = "/home/jl/Pictures/Wallpapers";
@@ -106,6 +106,7 @@ in
 
                 "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" #Gemini told me this would make DMS start faster
                 "fcitx5 -d -r"
+                "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
                 # Wait 3 seconds for the DMS IPC socket to initialize, then check/set the wallpaper.
                 # Added 2>/dev/null because on a TRUE first boot, session.json won't even exist yet.
                 "sh -c 'sleep 3 && if ! grep -q \"wallpaperPath\" ~/.local/state/DankMaterialShell/session.json 2>/dev/null; then dms ipc wallpaper set ${defaultWallpaper}; fi'"
