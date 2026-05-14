@@ -3,6 +3,7 @@
 {
     imports = [
         ./hyprland.nix
+        ./hyprportal.nix
         ./DankMaterialShell.nix
         ./theming.nix
 
