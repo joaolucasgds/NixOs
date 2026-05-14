@@ -4,7 +4,7 @@
     fonts.fontDir.enable = true;
 
     fonts.packages = with pkgs; [
-        #Alacritty
+        #Terminal font
         nerd-fonts.fira-code
 
         #Japanese / Chinese / Korean Support (CJK)

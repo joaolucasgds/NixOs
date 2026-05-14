@@ -14,7 +14,7 @@ in
         settings = {
             monitor = ", highrr, auto, 1";
 
-            "$terminal" = "alacritty";
+            "$terminal" = "kitty";
             "$mainMod" = "SUPER";
 
             bind = [

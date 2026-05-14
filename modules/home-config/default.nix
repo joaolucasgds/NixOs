@@ -7,7 +7,9 @@ let
         ./default/wallpapers.nix
         ./default/fcitx5.nix
         #Programs
-        ./programs/alacritty.nix
+        # ./programs/alacritty.nix
+        ./programs/kitty.nix
+
         ./programs/bash.nix
         ./programs/git.nix
         ./programs/lazygit.nix
