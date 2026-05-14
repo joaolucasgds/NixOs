@@ -45,12 +45,6 @@
 
     # --- System Configured Programs ---
 
-    # Open terminal from Nautilus context menu
-    programs.nautilus-open-any-terminal = {
-        enable = true;
-        terminal = "alacritty";
-    };
-
     # Gaming Optimization
     programs.gamemode.enable = true;
 
