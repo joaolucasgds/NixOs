@@ -14,6 +14,11 @@
                 fi
                 rm -f -- "$tmp"
             }
+            
+            lazygit() {
+                eval "$(keychain --eval --quiet ~/.ssh/id_ed25519)"
+                command lazygit "$@"
+            }
         '';
         bashrcExtra = ''
             export PS1="\[\033[38;5;4m\]\u@\h \w \$ \[\033[0m\]"
