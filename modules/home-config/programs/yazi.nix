@@ -28,8 +28,15 @@
         theme = {
             filetype = {
                 rules = [
-                    { mime = "inode/directory"; fg = "gray"; }
-                    # { mime = "inode/directory"; fg = "#8a8a8a"; } 
+                    { 
+                        # "name = "*/" is a more reliable way to target directories in Yazi
+                        name = "*/"; 
+                        style = { fg = "#8a8a8a"; }; 
+                    }
+                    { 
+                        mime = "inode/directory"; 
+                        style = { fg = "#8a8a8a"; }; 
+                    }
                 ];
             };
         };
