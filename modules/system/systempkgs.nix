@@ -35,20 +35,6 @@
         jdk25               # Java for Minecraft
         modrinth-app        # Minecraft Mod Loader
 
-        # --- GNOME Extensions ---
-        gnomeExtensions.blur-my-shell
-        gnomeExtensions.caffeine
-        gnomeExtensions.clipboard-indicator
-        gnomeExtensions.gsconnect
-        gnomeExtensions.coverflow-alt-tab
-        gnomeExtensions.reboottouefi
-        gnomeExtensions.dynamic-panel
-        gnomeExtensions.gamebar-overlay
-        gnomeExtensions.hide-top-bar
-        gnomeExtensions.search-light
-        gnomeExtensions.brightness-control-using-ddcutil
-        gnomeExtensions.do-not-disturb-while-screen-sharing-or-recording
-        gnomeExtensions.focus-follows-workspace
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
