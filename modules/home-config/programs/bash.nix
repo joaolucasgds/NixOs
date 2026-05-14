@@ -4,6 +4,11 @@
     programs.bash = {
 	    enable = true;
 	    initExtra = ''
+            # Auto-start tmux unless we are already inside it or in a Nix shell
+            if [[ -z "$TMUX" && -z "$IN_NIX_SHELL" && $- == *i* ]]; then
+                exec tmux new-session -A -s default
+            fi
+
             fastfetch
 
             function y() {
