@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, inputs, ... }:
 
 {
     dconf.settings = {
@@ -197,4 +197,6 @@
 	    };
 
     };
-}
+    
+    home.file.".local/share/backgrounds".source = inputs.wallpapers;
+} 
