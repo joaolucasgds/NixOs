@@ -9,7 +9,6 @@ let
         #Programs
         ./programs/alacritty.nix
         ./programs/bash.nix
-        ./programs/fastfetch.nix
         ./programs/git.nix
         ./programs/lazygit.nix
         ./programs/nvim.nix
