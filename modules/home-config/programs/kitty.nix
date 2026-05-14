@@ -5,6 +5,7 @@
         enable = true;
         
         settings = {
+            confirm_os_window_close = 0;
             # Window Settings
             background_opacity = "0.1";
             background_blur = "1";
