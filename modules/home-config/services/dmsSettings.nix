@@ -51,6 +51,7 @@ let
                 name = "Main Bar";
                 enabled = true;
                 position = 0;
+                transparency = 0;
                 
                 # These will be dynamically overwritten by the script, 
                 # but i am leaving them here for a clean template structure.
@@ -79,7 +80,6 @@ let
 
                 rightWidgets = [
                     { id = "privacyIndicator"; enabled = true; }
-                    { id = "clipboard"; enabled = true; }
                     { id = "cpuUsage"; enabled = true; }
                     { id = "memUsage"; enabled = true; }
                     { id = "notificationButton"; enabled = true; }
