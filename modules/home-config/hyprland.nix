@@ -1,8 +1,14 @@
 { ... }:
 
+let
+    masterWallpaperDir = "/home/jl/Pictures/Wallpapers";
+    defaultWallpaper = "${masterWallpaperDir}/makima.png";
+in
+
 {
     wayland.windowManager.hyprland = {
         enable = true;
+        package = null; # installed as a systempkg, null here to prevent duplicate
 
         settings = {
             monitor = ", highrr, auto, 1";
@@ -14,6 +20,7 @@
                 #Keybinds for apps
 
                 "$mainMod, Q, killactive"
+                "$mainMod, Q, exec, dms ipc call bar reveal index 0" #also revel bar
                 "$mainMod, T, exec, $terminal"
                 "$mainMod, N, exec, zen-beta"
                 "$mainMod SHIFT, minus, exec, bruh - 10"
@@ -22,6 +29,10 @@
                 "$mainMod, F, exec, nautilus"
                 "$mainMod, P, exec, proton-pass"
                 "$mainMod, J, exec, protonvpn-app"
+                "$mainMod, A, exec, dms ipc call spotlight toggle"
+                "$mainMod, S, exec, dms ipc call settings toggle"
+                "$mainMod, Z, exec, dms ipc call bar toggle index 0"
+                "$mainMod, W, exec, dms ipc wallpaperCarousel toggle"
                 
                 # --- Window Management ---
             
@@ -52,8 +63,8 @@
                 "$mainMod SHIFT, 5, movetoworkspace, 5"
 
                 # Scroll through existing workspaces with mainMod + scroll
-                "$mainMod, mouse_down, workspace, e+1"
-                "$mainMod, mouse_up, workspace, e-1"
+                "$mainMod, mouse_up, workspace, e+1"
+                "$mainMod, mouse_down, workspace, e-1"
             ];
 
             input = {
@@ -66,10 +77,6 @@
                 "XDG_CURRENT_DESKTOP,Hyprland"
                 "XDG_SESSION_TYPE,wayland"
                 "XDG_SESSION_DESKTOP,Hyprland"
-                
-                # Force Dark Mode & Wayland for Qt/GTK
-                "QT_QPA_PLATFORM,wayland"
-                "GTK_THEME,Adwaita-dark"
 
                 # Input Methods (Japanese/Mandarin)
                 "XMODIFIERS,@im=fcitx"
@@ -77,8 +84,31 @@
                 "SDL_IM_MODULE,fcitx"
             ];
 
+            #Mouse and monitor import so DMDankMaterialShellS changes persist 
+            source = [
+                "/home/jl/.config/hypr/dms/cursor.conf"
+                "/home/jl/.config/hypr/dms/outputs.conf"
+            ];
+
+            animations = {
+                enabled = true;
+                bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+                animation = [
+                    "windows, 1, 3, myBezier"
+                    "windowsOut, 1, 3, default, popin 80%"
+                    "border, 1, 5, default"
+                    "fade, 1, 3, default"
+                    "workspaces, 1, 1, default"
+                ];
+            };
+
             exec-once = [
+
+                "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" #Gemini told me this would make DMS start faster
                 "fcitx5 -d -r"
+                # Wait 3 seconds for the DMS IPC socket to initialize, then check/set the wallpaper.
+                # Added 2>/dev/null because on a TRUE first boot, session.json won't even exist yet.
+                "sh -c 'sleep 3 && if ! grep -q \"wallpaperPath\" ~/.local/state/DankMaterialShell/session.json 2>/dev/null; then dms ipc wallpaper set ${defaultWallpaper}; fi'"
             ];
         };
     };
