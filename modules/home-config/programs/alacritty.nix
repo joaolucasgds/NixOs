@@ -1,4 +1,4 @@
-{ ... }:
+{ config, lib, ... }:
 
 {
     programs.alacritty = {
@@ -33,39 +33,10 @@
                 };
             };
 
-            colors = {
-                primary = {
-                    background = "#000000";
-                    foreground = "#f0f0f0";
-                };
-
-                cursor = {
-                    text = "#000000";
-                    cursor = "#ffffff";
-                };
-
-                normal = {
-                    black = "#1c1c1c";
-                    red = "#ff5f5f";
-                    green = "#5fff87";
-                    yellow = "#ffd75f";
-                    blue = "#5fafff";
-                    magenta = "#ff5fff";
-                    cyan = "#5fffff";
-                    white = "#e4e4e4";
-                };
-
-                bright = {
-                    black = "#3a3a3a";
-                    red = "#ff8787";
-                    green = "#87ffaf";
-                    yellow = "#ffdf87";
-                    blue = "#87caff";
-                    magenta = "#ff87ff";
-                    cyan = "#87ffff";
-                    white = "#ffffff";
-                };
-            };
+            general.live_config_reload = true;
+            general.import = [
+                "~/.config/alacritty/dank-theme.toml"
+            ];
 
             cursor = {
                 style = "Beam";
@@ -80,4 +51,21 @@
             };
         };
     };
+
+    home.activation = {
+        ensureDmsAlacrittyTheme = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+            # Define the path
+            THEME_PATH="${config.home.homeDirectory}/.config/alacritty/dank-theme.toml"
+
+            # Create the directory if it's missing
+            mkdir -p "$(dirname "$THEME_PATH")"
+
+            # If the file doesn't exist, create a dummy one
+            # This prevents Alacritty from crashing on first boot
+            if [ ! -f "$THEME_PATH" ]; then
+            echo "[colors]" > "$THEME_PATH"
+            fi
+        '';
+    };
 }
+
