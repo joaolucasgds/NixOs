@@ -3,6 +3,7 @@
 {
     programs.tmux = {
         enable = true;
+        mouse = true;
 
         extraConfig = ''
             set-option -g status-style bg=white,fg=black
