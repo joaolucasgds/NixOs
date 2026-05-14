@@ -1,10 +1,16 @@
-{ inputs, ... }:
+{ inputs, config, lib, ... }:
 
 {
     imports = [ inputs.zen-browser.homeModules.default ]; #Defaults is beta btw
 
     programs.zen-browser = {
         enable = true;
+
+        profiles.default = {
+            settings = {
+                "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+            };
+        };
 
         policies = {
 
@@ -51,5 +57,29 @@
         };
     };
 
+    #Prepare theme file userChrome.css
+    home.activation = {
+        linkZenTheme = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+            ZEN_DIR="${config.home.homeDirectory}/.config/zen"
+            DMS_CONFIG="${config.home.homeDirectory}/.config/DankMaterialShell"
+            THEME_SOURCE="$DMS_CONFIG/zen.css"
+
+            mkdir -p "$DMS_CONFIG"
+            if [ ! -f "$THEME_SOURCE" ]; then
+                echo "/* Initial DMS Zen Theme */" > "$THEME_SOURCE"
+            fi
+
+            PROFILE_PATH=$(find "$ZEN_DIR" -maxdepth 1 -type d -name "*default*" | head -n 1)
+
+            if [ -n "$PROFILE_PATH" ]; then
+                CHROME_DIR="$PROFILE_PATH/chrome"
+                mkdir -p "$CHROME_DIR"
+                
+                # 4. Create the symlink
+                # -s: symlink, -f: force (overwrites existing), -n: treat link as file
+                ln -sfn "$THEME_SOURCE" "$CHROME_DIR/userChrome.css"
+            fi
+        '';
+    };
 }
 
