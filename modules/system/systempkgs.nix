@@ -25,7 +25,6 @@
         brave               # Browser
         proton-pass         # Password manager
         proton-vpn           # VPN Client
-        deluge-gtk          # Torrent client
 
         # --- Media & Entertainment ---
         pear-desktop        # YouTube Music Client
