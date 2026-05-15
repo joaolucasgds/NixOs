@@ -30,7 +30,6 @@ in
                 "$mainMod, T, exec, $terminal"
                 "$mainMod, N, exec, zen-beta"
                 "$mainMod, D, exec, vesktop"
-                "$mainMod, F, exec, nautilus"
                 "$mainMod, P, exec, proton-pass"
                 "$mainMod, J, exec, protonvpn-app"
                 "$mainMod, A, exec, dms ipc call spotlight toggle"
