@@ -93,7 +93,7 @@
         # Browser
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
             name = "Browser";
-            command = "zen";
+            command = "zen-beta";
             binding = "<Control><Alt>n";
         };
 
