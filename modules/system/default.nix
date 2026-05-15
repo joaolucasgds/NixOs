@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, hostvars, ... }:
 
 {
     imports = [
@@ -15,7 +15,8 @@
         ./systempkgs.nix
         ./vm.nix
 
-        ./nvidia.nix#Waiting for the day i can comment this out
+    ] ++ lib.optionals ( hostvars.video == "nvidia") [
+        ./nvidia.nix #Waiting for the day i can comment this out
     ];
 }
 
