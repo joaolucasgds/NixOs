@@ -34,6 +34,8 @@
         Defaults rootpw
     '';
 
+    hardware.bluetooth.enable = true;
+
     documentation.nixos.enable = false;
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
