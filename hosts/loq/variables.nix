@@ -10,6 +10,11 @@
     DMSdefaultMonitorModel = "0x1552";
 
     desktop = "hyprland";
+    #desktop = "gnome";
+
+    video = "nvidia";
+    # video = "amd";
+    # video = "intel";
 }
 
 
