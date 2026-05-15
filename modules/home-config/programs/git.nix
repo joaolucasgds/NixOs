@@ -2,7 +2,7 @@
 
 let
     email = "joaolucasgdesouza@gmail.com";
-    pubKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIASYEnzXMUbCIlJ/lENE3bWvVWoQAtc9XjTLEz5ZxOV jl@NixOs";
+    pubKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgZ1T0HJbldDUbQR1OwLym/46ECcYySP1VQslBTNjTt joaolucasgdesouza@gmail.com";
 in
 
 {
