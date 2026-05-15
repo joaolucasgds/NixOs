@@ -7,6 +7,7 @@
     ];
 
     home.file.".var/app/com.dec05eba.gpu_screen_recorder/config/gpu-screen-recorder/config_ui-template" = {
+        #This is nvidia only, shoudl wrap around nvidia if
         text = ''
             main.config_file_version 2
             main.hotkeys_enable_option enable_hotkeys
@@ -23,8 +24,8 @@
             record.record_options.audio_codec opus
             record.record_options.audio_track_item true [add_audio_track]
             record.record_options.change_video_resolution false
-            record.record_options.codec auto
-            record.record_options.color_range limited
+            record.record_options.codec hevc_10bit
+            record.record_options.color_range full
             record.record_options.enable_vulkan_video_encoding false
             record.record_options.fps 60
             record.record_options.framerate_mode cfr
@@ -62,8 +63,8 @@
             replay.record_options.audio_codec opus
             replay.record_options.audio_track_item true [add_audio_track]
             replay.record_options.change_video_resolution false
-            replay.record_options.codec auto
-            replay.record_options.color_range limited
+            replay.record_options.codec hevc_10bit
+            replay.record_options.color_range full
             replay.record_options.enable_vulkan_video_encoding false
             replay.record_options.fps 60
             replay.record_options.framerate_mode cfr
