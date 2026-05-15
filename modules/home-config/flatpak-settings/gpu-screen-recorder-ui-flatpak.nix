@@ -1,4 +1,4 @@
-{ lib, ... }: 
+{ lib, hostvars, ... }: 
 
 {
     # Create Videos/Games so replays are saved correctly
@@ -6,8 +6,7 @@
         "d %h/Videos/Games 0755 - - -"
     ];
 
-    home.file.".var/app/com.dec05eba.gpu_screen_recorder/config/gpu-screen-recorder/config_ui-template" = {
-        #This is nvidia only, shoudl wrap around nvidia if
+    home.file.".var/app/com.dec05eba.gpu_screen_recorder/config/gpu-screen-recorder/config_ui-template" = lib.mkIf (hostvars.video == "nvidia") {
         text = ''
             main.config_file_version 2
             main.hotkeys_enable_option enable_hotkeys
