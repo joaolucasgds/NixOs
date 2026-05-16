@@ -72,8 +72,7 @@ in
                 "CONTROL ALT, period, movetoworkspace, 5"
 
                 # <wl-kbptr> and <wlrctl>
-                "$mainMod, M, exec, wl-kbptr -o modes=split"
-                "$mainMod, comma, exec, wl-kbptr -o modes=tile"
+                "$mainMod, M, exec, wl-kbptr"
 
                 "$mainMod, E, exec, wlrctl pointer click right"
                 "$mainMod, W, exec, wlrctl pointer click left"
