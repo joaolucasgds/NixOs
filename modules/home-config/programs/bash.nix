@@ -1,4 +1,4 @@
-{ ... }:
+{ hostvars, ... }:
 
 {
     programs.bash = {
@@ -18,6 +18,10 @@
 
             n() {
                 command nvim "$@"
+            }
+            
+            rebuild() {
+                sudo nixos-rebuild switch --flake ~/nixos/#${hostvars.host}
             }
         '';
         bashrcExtra = ''
