@@ -15,8 +15,8 @@ in
             monitor = ", highrr, auto, 1";
 
             workspace = [
-                "1, monitor:desc:${hostvars.defaultMonitorModel}, default:true"
-                "2, monitor:desc:${hostvars.primaryMonitorModel}, default:true"
+                "1, monitor:desc:${hostvars.primaryMonitorModel}, default:true"
+                "5, monitor:desc:${hostvars.defaultMonitorModel}, default:true"
             ];
 
             "$terminal" = "kitty";
