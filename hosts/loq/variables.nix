@@ -15,6 +15,8 @@
     video = "nvidia";
     # video = "amd";
     # video = "intel";
+
+    host = "LoqNix";
 }
 
 

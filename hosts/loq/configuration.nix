@@ -14,7 +14,7 @@ in
     imports = hardwareModule ++ systemModule ++ deModule;
 
     # Host indentity
-    networking.hostName = "NixOs"; 
+    networking.hostname = hostvars.host; 
     networking.networkmanager.enable = true;
 
     boot.kernelPackages = pkgs.linuxPackages_zen;
