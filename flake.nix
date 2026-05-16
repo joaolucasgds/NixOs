@@ -41,9 +41,9 @@
         };
     };
 
-    outputs = { self, nixpkgs, ... }@inputs: {
+    outputs = { nixpkgs, ... }@inputs: {
         nixosConfigurations = {
-            "loq" = nixpkgs.lib.nixosSystem{
+            "LoqNix" = nixpkgs.lib.nixosSystem{
                 system = "x86_64-linux";
                 specialArgs = { 
                     inherit inputs;
