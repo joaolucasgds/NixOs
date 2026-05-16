@@ -37,7 +37,7 @@ in
                 "CONTROL ALT, J, exec, protonvpn-app"
                 "CONTROL ALT, A, exec, dms ipc call spotlight toggle"
                 "CONTROL ALT, TAB, exec, dms ipc call settings toggle"
-                "$mainMod CONTROL SHIFT, Z, exec, dms ipc call bar toggle index 0"
+                "$mainMod CONTROL, Alt_L, exec, dms ipc call bar toggle index 0"
                 "CONTROL ALT, W, exec, dms ipc wallpaperCarousel toggle"
                 "$mainMod CONTROL, minus, exec, bruh - 10"
                 "$mainMod CONTROL, equal, exec, bruh + 10"
@@ -62,14 +62,14 @@ in
                 "$mainMod CONTROL, backslash, workspace, 2"
                 "$mainMod CONTROL, Z, workspace, 3"
                 "$mainMod CONTROL, X, workspace, 4"
-                "$mainMod CONTROL, ., workspace, 5"
+                "$mainMod CONTROL, period, workspace, 5"
 
                 # Move active window to a workspace with mainMod + SHIFT + [0-9]
                 "CONTROL ALT, Shift_L, movetoworkspace, 1"
                 "CONTROL ALT, backslash, movetoworkspace, 2"
                 "CONTROL ALT, Z, movetoworkspace, 3"
                 "CONTROL ALT, X, movetoworkspace, 4"
-                "CONTROL ALT, ., movetoworkspace, 5"
+                "CONTROL ALT, period, movetoworkspace, 5"
 
                 # <wl-kbptr> and <wlrctl>
                 "$mainMod, Shift_R, exec, wl-kbptr -o modes=split"
