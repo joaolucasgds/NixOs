@@ -42,25 +42,24 @@
                     nix = {
                         enable = true;
                         extraDiagnostics.enable = true;
-
-                        lsp.setupOpts = {
-                            settings = {
-                                "nil" = {
-                                    nix = {
-                                        flake = {
-                                            autoArchive = true;
-                                        };
-                                    };
-                                };
-                            };
-                        };
-
                     };
 
                     rust.enable = true;
                     clang.enable = true;
                     lua.enable = true;
                     java.enable = true;
+                };
+
+                lsp.servers."nil" = {
+                    settings = {
+                        "nil" = {
+                            nix = {
+                                flake = {
+                                    autoArchive = true;
+                                };
+                            };
+                        };
+                    };
                 };
 
                 treesitter = {
