@@ -25,48 +25,48 @@ in
             bind = [
                 #Keybinds for apps
 
-                "$mainMod, Q, killactive"
-                "$mainMod, Q, exec, dms ipc call bar reveal index 0" #also revel bar
-                "$mainMod, T, exec, $terminal"
-                "$mainMod, N, exec, zen-beta"
-                "$mainMod, D, exec, vesktop"
-                "$mainMod, P, exec, proton-pass"
-                "$mainMod, J, exec, protonvpn-app"
-                "$mainMod, A, exec, dms ipc call spotlight toggle"
-                "$mainMod, S, exec, dms ipc call settings toggle"
-                "$mainMod, Z, exec, dms ipc call bar toggle index 0"
-                "$mainMod, W, exec, dms ipc wallpaperCarousel toggle"
-                "$mainMod SHIFT, minus, exec, bruh - 10"
-                "$mainMod SHIFT, equal, exec, bruh + 10"
+                "$mainMod CONTROL, TAB, killactive"
+                "$mainMod CONTROL, TAB, exec, dms ipc call bar reveal index 0" #also revel bar
+                "CONTROL ALT, Caps_Lock, exec, $terminal"
+                "CONTROL ALT, S, exec, zen-beta"
+                "CONTROL ALT, D, exec, vesktop"
+                "CONTROL ALT, P, exec, proton-pass"
+                "CONTROL ALT, J, exec, protonvpn-app"
+                "CONTROL ALT, A, exec, dms ipc call spotlight toggle"
+                "CONTROL ALT, TAB, exec, dms ipc call settings toggle"
+                "$mainMod CONTROL SHIFT, Z, exec, dms ipc call bar toggle index 0"
+                "CONTROL ALT, W, exec, dms ipc wallpaperCarousel toggle"
+                "$mainMod CONTROL, minus, exec, bruh - 10"
+                "$mainMod CONTROL, equal, exec, bruh + 10"
                 "$mainMod SHIFT, S, exec, hyprshot --m region"
                 
                 # --- Window Management ---
             
                 # Move focus with mainMod + arrow keys
-                "$mainMod, left, movefocus, l"
-                "$mainMod, right, movefocus, r"
-                "$mainMod, up, movefocus, u"
-                "$mainMod, down, movefocus, d"
+                "$mainMod, H, movefocus, l"
+                "$mainMod, L, movefocus, r"
+                "$mainMod, K, movefocus, u"
+                "$mainMod, J, movefocus, d"
 
-                # Move active window with mainMod + SHIFT + arrow keys
-                "$mainMod SHIFT, left, movewindow, l"
-                "$mainMod SHIFT, right, movewindow, r"
-                "$mainMod SHIFT, up, movewindow, u"
-                "$mainMod SHIFT, down, movewindow, d"
+                # Move active window with mainMod + CONTROL + hjkl
+                "$mainMod CONTROL, H, movewindow, l"
+                "$mainMod CONTROL, L, movewindow, r"
+                "$mainMod CONTROL, K, movewindow, u"
+                "$mainMod CONTROL, J, movewindow, d"
 
-                # Switch workspaces with mainMod + [0-9]
-                "$mainMod, 1, workspace, 1"
-                "$mainMod, 2, workspace, 2"
-                "$mainMod, 3, workspace, 3"
-                "$mainMod, 4, workspace, 4"
-                "$mainMod, 5, workspace, 5"
+                # Switch workspaces with mainMod + CONTROL + key - 1to5
+                "$mainMod CONTROL, Shift_L, workspace, 1"
+                "$mainMod CONTROL, backslash, workspace, 2"
+                "$mainMod CONTROL, Z, workspace, 3"
+                "$mainMod CONTROL, X, workspace, 4"
+                "$mainMod CONTROL, ., workspace, 5"
 
                 # Move active window to a workspace with mainMod + SHIFT + [0-9]
-                "$mainMod SHIFT, 1, movetoworkspace, 1"
-                "$mainMod SHIFT, 2, movetoworkspace, 2"
-                "$mainMod SHIFT, 3, movetoworkspace, 3"
-                "$mainMod SHIFT, 4, movetoworkspace, 4"
-                "$mainMod SHIFT, 5, movetoworkspace, 5"
+                "CONTROL ALT, Shift_L, movetoworkspace, 1"
+                "CONTROL ALT, backslash, movetoworkspace, 2"
+                "CONTROL ALT, Z, movetoworkspace, 3"
+                "CONTROL ALT, X, movetoworkspace, 4"
+                "CONTROL ALT, ., movetoworkspace, 5"
 
                 # Scroll through existing workspaces with mainMod + scroll
                 "$mainMod, mouse_up, workspace, e+1"
