@@ -71,13 +71,13 @@ in
                 "CONTROL ALT, X, movetoworkspace, 4"
                 "CONTROL ALT, ., movetoworkspace, 5"
 
-                # <wl-kbptr> and <ydotool>
+                # <wl-kbptr> and <wlrctl>
                 "$mainMod, Shift_R, exec, wl-kbptr -o modes=split"
                 "$mainMod, slash, exec, wl-kbptr -o modes=tile"
 
-                "$mainMod, Control_R, exec, ydotool click 0xC1"
-                "$mainMod, Menu, exec, ydotool click 0xC0"
-                "$mainMod, left, exec, ydotool click 0xC2"
+                "$mainMod, Control_R, exec, wlrctl pointer click right"
+                "$mainMod, Menu, exec, wlrctl pointer click left"
+                "$mainMod, left, exec, wlrctl pointer click middle"
 
                 # Scroll through existing workspaces with mainMod + scroll
                 "$mainMod, mouse_up, workspace, e+1"

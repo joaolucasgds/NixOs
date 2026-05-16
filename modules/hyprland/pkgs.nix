@@ -5,7 +5,7 @@
     environment.systemPackages = [
         pkgs.polkit_gnome
         pkgs.wl-kbptr
-        pkgs.ydotool
+        pkgs.wlrctl
     ];
 
     programs.kdeconnect.enable = true;
