@@ -72,12 +72,12 @@ in
                 "CONTROL ALT, period, movetoworkspace, 5"
 
                 # <wl-kbptr> and <wlrctl>
-                "$mainMod, Shift_R, exec, wl-kbptr -o modes=split"
-                "$mainMod, slash, exec, wl-kbptr -o modes=tile"
+                "$mainMod, M, exec, wl-kbptr -o modes=split"
+                "$mainMod, comma, exec, wl-kbptr -o modes=tile"
 
-                "$mainMod, Control_R, exec, wlrctl pointer click right"
-                "$mainMod, Menu, exec, wlrctl pointer click left"
-                "$mainMod, left, exec, wlrctl pointer click middle"
+                "$mainMod, E, exec, wlrctl pointer click right"
+                "$mainMod, W, exec, wlrctl pointer click left"
+                "$mainMod, Q, exec, wlrctl pointer click middle"
 
                 # Scroll through existing workspaces with mainMod + scroll
                 "$mainMod, mouse_up, workspace, e+1"
