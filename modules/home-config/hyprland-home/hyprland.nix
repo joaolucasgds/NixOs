@@ -23,6 +23,9 @@ in
             "$mainMod" = "SUPER";
 
             bind = [
+                # Shutdown
+                "$mainMod, Pause, exec, shutdown now"
+
                 #Keybinds for apps
 
                 "$mainMod CONTROL, TAB, killactive"
@@ -67,6 +70,12 @@ in
                 "CONTROL ALT, Z, movetoworkspace, 3"
                 "CONTROL ALT, X, movetoworkspace, 4"
                 "CONTROL ALT, ., movetoworkspace, 5"
+
+                # # <wl-kbptr>
+                # "$mainMod, H, exec, 0"
+                # "$mainMod, J, exec, 0"
+                # "$mainMod, K, exec, 0"
+                # "$mainMod, L, exec, 0"
 
                 # Scroll through existing workspaces with mainMod + scroll
                 "$mainMod, mouse_up, workspace, e+1"
