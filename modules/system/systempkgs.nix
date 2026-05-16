@@ -18,7 +18,6 @@
         fd                  # Fast file finder (better find)
         android-studio
         gradle
-        virt-manager
         qemu
 
         # --- Internet & Communication ---
@@ -44,6 +43,10 @@
     ];
 
     # --- System Configured Programs ---
+
+    programs.virt-manager = {
+        enable = true;
+    };
 
     # Gaming Optimization
     programs.gamemode.enable = true;
