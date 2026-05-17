@@ -25,6 +25,8 @@ in
             bind = [
                 # Shutdown
                 "$mainMod, Pause, exec, shutdown now"
+                #Passtrough mode
+                "$mainMod, F12, submap, passthrough"
 
                 #Keybinds for apps
 
@@ -141,5 +143,11 @@ in
                 "sh -c 'sleep 3 && if ! grep -q \"wallpaperPath\" ~/.local/state/DankMaterialShell/session.json 2>/dev/null; then dms ipc wallpaper set ${defaultWallpaper}; fi'"
             ];
         };
+
+        extraConfig = ''
+            submap = passthrough
+            bind = $mainMod, F12, submap, reset
+            submap = reset
+        '';
     };
 }
