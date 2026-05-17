@@ -41,8 +41,8 @@ in
                 "CONTROL ALT, TAB, exec, dms ipc call settings toggle"
                 "$mainMod CONTROL, Alt_L, exec, dms ipc call bar toggle index 0"
                 "CONTROL ALT, W, exec, dms ipc wallpaperCarousel toggle"
-                "$mainMod CONTROL, minus, exec, bruh - 10"
-                "$mainMod CONTROL, equal, exec, bruh + 10"
+                "$mainMod CONTROL, N, exec, bruh - 10"
+                "$mainMod CONTROL, M, exec, bruh + 10"
                 "$mainMod SHIFT, S, exec, hyprshot --m region"
                 
                 # --- Window Management ---
@@ -147,6 +147,12 @@ in
         extraConfig = ''
             submap = passthrough
             bind = $mainMod, F12, submap, reset
+
+            # bind = $mainMod CONTROL, Shift_L, workspace, 1
+            # bind = $mainMod CONTROL, backslash, workspace, 2
+            # bind = $mainMod CONTROL, Z, workspace, 3
+            # bind = $mainMod CONTROL, X, workspace, 4
+            # bind = $mainMod CONTROL, period, workspace, 5
             submap = reset
         '';
     };
