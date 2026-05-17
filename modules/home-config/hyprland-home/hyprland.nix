@@ -36,7 +36,7 @@ in
                 "CONTROL ALT, S, exec, zen-beta"
                 "CONTROL ALT, D, exec, vesktop"
                 "CONTROL ALT, P, exec, proton-pass"
-                "CONTROL ALT, J, exec, protonvpn-app"
+                "CONTROL ALT, O, exec, protonvpn-app"
                 "CONTROL ALT, A, exec, dms ipc call spotlight toggle"
                 "CONTROL ALT, TAB, exec, dms ipc call settings toggle"
                 "$mainMod CONTROL, Alt_L, exec, dms ipc call bar toggle index 0"
@@ -54,10 +54,10 @@ in
                 "$mainMod, J, movefocus, d"
 
                 # Move active window with mainMod + CONTROL + hjkl
-                "$mainMod CONTROL, H, movewindow, l"
-                "$mainMod CONTROL, L, movewindow, r"
-                "$mainMod CONTROL, K, movewindow, u"
-                "$mainMod CONTROL, J, movewindow, d"
+                "CONTROL ALT, H, movewindow, l"
+                "CONTROL ALT, L, movewindow, r"
+                "CONTROL ALT, K, movewindow, u"
+                "CONTROL ALT, J, movewindow, d"
 
                 # Switch workspaces with mainMod + CONTROL + key - 1to5
                 "$mainMod CONTROL, Shift_L, workspace, 1"
