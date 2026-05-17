@@ -6,6 +6,7 @@
         pkgs.polkit_gnome
         pkgs.wl-kbptr
         pkgs.wlrctl
+        pkgs.playerctl
     ];
 
     programs.kdeconnect.enable = true;
