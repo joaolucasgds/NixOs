@@ -1,4 +1,4 @@
-{ inputs, pkgs, ...}: 
+{ inputs, config, pkgs, ...}: 
 
 {
     imports = [
@@ -36,7 +36,7 @@
                 }}";
 
                 settings = {
-                    wallpaperDirectory = "/home/jl/Pictures/Wallpapers";
+                    wallpaperDirectory = "${config.home.homeDirectory}/Pictures/Wallpapers";
                 };
             };
         };

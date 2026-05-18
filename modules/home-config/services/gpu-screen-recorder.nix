@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
     systemd.user.services."gpu-screen-recorder-ui" = {
@@ -8,7 +8,7 @@
         };
 
         Service = {
-            Environment = "PATH=/run/current-system/sw/bin:/home/jl/.nix-profile/bin:/usr/bin:/bin";
+            Environment = "PATH=/run/current-system/sw/bin:${config.home.homeDirectory}/.nix-profile/bin:/usr/bin:/bin";
             ExecStart = "/run/current-system/sw/bin/flatpak run com.dec05eba.gpu_screen_recorder gsr-ui";
             KillSignal = "SIGINT";
             Restart = "on-failure";

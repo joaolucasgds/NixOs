@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
     systemd.user.services."vesktop" = {
@@ -9,7 +9,7 @@
 
         Service = {
             # Keeping your existing PATH environment
-            Environment = "PATH=/run/current-system/sw/bin:/home/jl/.nix-profile/bin:/usr/bin:/bin";
+            Environment = "PATH=/run/current-system/sw/bin:${config.home.homeDirectory}/.nix-profile/bin:/usr/bin:/bin";
             
             # Grabs the exact Nix store path for Vesktop and appends the flag
             ExecStart = "${pkgs.vesktop}/bin/vesktop --start-minimized";

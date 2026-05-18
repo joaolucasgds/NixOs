@@ -1,10 +1,10 @@
-{ pkgs, hostvars, ... }:
+{ pkgs, config, hostvars, ... }:
 
 let
     baseSettings = {
         # --- Wallpaper ---
         wallpaper = {
-            directory = "/home/jl/Pictures/Wallpapers";
+            directory = "${config.home.homeDirectory}/Pictures/Wallpapers";
         };
         wallpaperFillMode = "Fill";
 

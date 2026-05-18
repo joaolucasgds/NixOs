@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, config, inputs, ... }:
 
 {
     dconf.settings = {
@@ -192,8 +192,8 @@
 
 	    # Auto Select Wallpaper
 	    "org/gnome/desktop/background" = {
-	        picture-uri = "file:///home/jl/.local/share/backgrounds/lucyna.png";
-	        picture-uri-dark = "file:///home/jl/.local/share/backgrounds/lucyna.png";
+	        picture-uri = "file://${config.home.homeDirectory}/.local/share/backgrounds/lucyna.png";
+	        picture-uri-dark = "file://${config.home.homeDirectory}/.local/share/backgrounds/lucyna.png";
 	    };
 
     };

@@ -1,7 +1,7 @@
-{ pkgs, hostvars, ... }:
+{ pkgs, config, hostvars, ... }:
 
 let
-    masterWallpaperDir = "/home/jl/Pictures/Wallpapers";
+    masterWallpaperDir = "${config.home.homeDirectory}/Pictures/Wallpapers";
     defaultWallpaper = "${masterWallpaperDir}/makima.png";
 in
 
@@ -120,8 +120,8 @@ in
 
             #Mouse and monitor import so DMDankMaterialShellS changes persist 
             source = [
-                "/home/jl/.config/hypr/dms/cursor.conf"
-                "/home/jl/.config/hypr/dms/outputs.conf"
+                "${config.home.homeDirectory}/.config/hypr/dms/cursor.conf"
+                "${config.home.homeDirectory}/.config/hypr/dms/outputs.conf"
             ];
 
             animations = {
