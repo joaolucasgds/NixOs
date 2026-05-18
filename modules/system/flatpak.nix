@@ -11,15 +11,18 @@
             onCalendar = "weekly";
         };
 
+        uninstallUnmanaged = true;
+
         packages = [
             # --- Browsing & Media ---
             "io.freetubeapp.FreeTube"
-            "com.github.iwalton3.jellyfin-media-player"
+            "org.jellyfin.JellyfinDesktop"
 
             # --- Tools & Utilities ---
             "com.dec05eba.gpu_screen_recorder"
             "app.drey.Warp"
 	        "dev.bragefuglseth.Keypunch"
+            "com.pikatorrent.PikaTorrent"
 
             # --- Gaming ---
             "org.vinegarhq.Sober"
