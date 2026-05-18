@@ -1,9 +1,10 @@
-{ ... }:
+__:
 
 {
     programs.tmux = {
         enable = true;
         mouse = true;
+        keyMode = "vi";
 
         extraConfig = ''
             # --- 1. Open new windows and panes in the current directory ---
