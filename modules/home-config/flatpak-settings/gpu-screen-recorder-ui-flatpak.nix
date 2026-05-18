@@ -1,11 +1,6 @@
 { config, lib, hostvars, ... }: 
 
 {
-    # Create Videos/Games so replays are saved correctly
-    systemd.user.tmpfiles.rules = [
-        "d %h/Videos/Games 0755 - - -"
-    ];
-
     home.file.".var/app/com.dec05eba.gpu_screen_recorder/config/gpu-screen-recorder/config_ui-template" = lib.mkIf (hostvars.video == "nvidia") {
         text = ''
             main.config_file_version 2
@@ -51,7 +46,7 @@
             record.record_options.webcam_width 30
             record.record_options.webcam_x 0
             record.record_options.webcam_y 0
-            record.save_directory /home/jl/Downloads
+            record.save_directory ${config.home.homeDirectory}/Videos/Temporary
             record.save_video_in_game_folder false
             record.start_stop_hotkey 94 16
             record.start_stop_region_hotkey 94 4
@@ -94,7 +89,7 @@
             replay.restart_replay_on_save true
             replay.save_10_min_hotkey 97 16
             replay.save_1_min_hotkey 96 16
-            replay.save_directory /home/jl/Videos/Games
+            replay.save_directory ${config.home.homeDirectory}/Videos/Games
             replay.save_hotkey 95 16
             replay.save_video_in_game_folder false
             replay.start_stop_hotkey 95 17
