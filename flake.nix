@@ -17,7 +17,7 @@
         };
 
         wallpapers = {
-            url = "github:joaolucasgds/Wallpapers";
+            url = "https://github.com/joaolucasgds/Wallpapers/releases/download/Wallpapers/wallpapers.tar.gz";
             flake = false;
         };
 

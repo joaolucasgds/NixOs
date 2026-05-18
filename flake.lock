@@ -346,17 +346,14 @@
     "wallpapers": {
       "flake": false,
       "locked": {
-        "lastModified": 1767734088,
-        "narHash": "sha256-p9bH+7fBwQ5WBn5eenSyTJivmroQWCzmex6kVv/nedo=",
-        "owner": "joaolucasgds",
-        "repo": "Wallpapers",
-        "rev": "7b7c17ae5464c4bb8150bd1c3ef73b56b79e21a0",
-        "type": "github"
+        "lastModified": 1779141102,
+        "narHash": "sha256-A4RNRQ9smfXrJRYPhAY8idhxU8XyA2pwERvWekDDIlA=",
+        "type": "tarball",
+        "url": "https://github.com/joaolucasgds/Wallpapers/releases/download/Wallpapers/wallpapers.tar.gz"
       },
       "original": {
-        "owner": "joaolucasgds",
-        "repo": "Wallpapers",
-        "type": "github"
+        "type": "tarball",
+        "url": "https://github.com/joaolucasgds/Wallpapers/releases/download/Wallpapers/wallpapers.tar.gz"
       }
     },
     "zen-browser": {
