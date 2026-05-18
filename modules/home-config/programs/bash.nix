@@ -23,6 +23,10 @@
             rebuild() {
                 sudo nixos-rebuild switch --flake ~/nixos/#${hostvars.host}
             }
+
+            uefi() {
+                systemctl reboot --firmware-setup
+            }
         '';
         bashrcExtra = ''
             export PS1="\[\033[38;5;4m\]\u@\h \w \$ \[\033[0m\]"
