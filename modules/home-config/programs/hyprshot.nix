@@ -1,8 +1,8 @@
-{ ... }:
+{ config, ... }:
 
 {
     programs.hyprshot = {
 	    enable = true;
-        saveLocation = "/home/jl/Downloads/";
+        saveLocation = "${config.home.homeDirectory}/Pictures/Screenshots";
     };
 }

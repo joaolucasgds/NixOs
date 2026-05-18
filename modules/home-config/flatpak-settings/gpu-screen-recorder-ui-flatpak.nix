@@ -1,4 +1,4 @@
-{ lib, hostvars, ... }: 
+{ config, lib, hostvars, ... }: 
 
 {
     # Create Videos/Games so replays are saved correctly
@@ -109,7 +109,7 @@
             screenshot.record_area_option focused_monitor
             screenshot.record_cursor true
             screenshot.restore_portal_session true
-            screenshot.save_directory /home/jl/Downloads
+            screenshot.save_directory ${config.home.homeDirectory}/Pictures/Screenshots
             screenshot.save_screenshot_in_game_folder false
             screenshot.save_screenshot_to_clipboard false
             screenshot.save_screenshot_to_disk true
