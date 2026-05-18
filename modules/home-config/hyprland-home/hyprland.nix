@@ -151,11 +151,25 @@ in
             submap = passthrough
             bind = $mainMod, F12, submap, reset
 
-            # bind = $mainMod CONTROL, Shift_L, workspace, 1
-            # bind = $mainMod CONTROL, backslash, workspace, 2
-            # bind = $mainMod CONTROL, Z, workspace, 3
-            # bind = $mainMod CONTROL, X, workspace, 4
-            # bind = $mainMod CONTROL, period, workspace, 5
+            bind = $mainMod CONTROL, Shift_L, workspace, 1
+            bind = $mainMod CONTROL, backslash, workspace, 2
+            bind = $mainMod CONTROL, Z, workspace, 3
+            bind = $mainMod CONTROL, X, workspace, 4
+            bind = $mainMod CONTROL, period, workspace, 5
+
+            # --- Media and Brightness Bindings ---
+
+            bindel = , XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+
+            bindel = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+            bindel = , XF86MonBrightnessUp, exec, brightnessctl s 5%+
+            bindel = , XF86MonBrightnessDown, exec, brightnessctl s 5%-
+
+            bindl = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+            bindl = , XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+            bindl = , XF86AudioPlay, exec, playerctl play-pause
+            bindl = , XF86AudioNext, exec, playerctl next
+            bindl = , XF86AudioPrev, exec, playerctl previous
+
             submap = reset
         '';
     };
