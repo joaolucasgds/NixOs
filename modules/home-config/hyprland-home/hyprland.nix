@@ -1,4 +1,4 @@
-{ pkgs, config, hostvars, ... }:
+{ pkgs, config, hostvars, lib, ... }:
 
 let
     masterWallpaperDir = "${config.home.homeDirectory}/Pictures/Wallpapers";
@@ -16,6 +16,7 @@ in
 
             workspace = [
                 "1, monitor:desc:${hostvars.primaryMonitorModel}, default:true"
+            ] ++ lib.optionals (hostvars.defaultMonitorModel != "") [
                 "5, monitor:desc:${hostvars.defaultMonitorModel}, default:true"
             ];
 
