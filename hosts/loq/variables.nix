@@ -8,8 +8,11 @@ in
     desktop = builtins.elemAt desktopList 0;
     video = builtins.elemAt videoList 0;
 
-    # Monitor setup Details | hw-info to find data
-    primaryMonitorModel = "AOC 24G4";
-    defaultMonitorModel = "Chimei Innolux Corporation 0x1552";
+    # Monitor setup Details | grep . /sys/class/drm/*/status
+    prMonitor = "HDMI-A-1";
+    seMonitor = "eDP-1";
+    thMonitor = "";
+    foMonitor = "";
+    fiMonitor = ""; 
 }
 

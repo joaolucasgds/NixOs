@@ -15,9 +15,18 @@ in
             monitor = ", highrr, auto, 1";
 
             workspace = [
-                "1, monitor:desc:${hostvars.primaryMonitorModel}, default:true"
-            ] ++ lib.optionals (hostvars.defaultMonitorModel != "") [
-                "5, monitor:desc:${hostvars.defaultMonitorModel}, default:true"
+                "1, monitor:${hostvars.prMonitor}, default:true"
+                "2, monitor:${hostvars.prMonitor}"
+                "3, monitor:${hostvars.prMonitor}"
+                "4, monitor:${hostvars.prMonitor}"
+            ] ++ lib.optionals (hostvars.seMonitor != "") [
+                "5, monitor:${hostvars.seMonitor}, default:true"
+            ] ++ lib.optionals (hostvars.thMonitor != "") [
+                "6, monitor:${hostvars.thMonitor}, default:true"
+            ] ++ lib.optionals (hostvars.foMonitor != "") [
+                "7, monitor:${hostvars.foMonitor}, default:true"
+            ] ++ lib.optionals (hostvars.fiMonitor != "") [
+                "8, monitor:${hostvars.fiMonitor}, default:true"
             ];
 
             "$terminal" = "kitty";
@@ -42,8 +51,8 @@ in
                 "CONTROL ALT, TAB, exec, dms ipc call settings toggle"
                 "$mainMod CONTROL, Alt_L, exec, dms ipc call bar toggle index 0"
                 "CONTROL ALT, W, exec, dms ipc wallpaperCarousel toggle"
-                "$mainMod CONTROL, N, exec, bruh - 10"
-                "$mainMod CONTROL, M, exec, bruh + 10"
+                "$mainMod CONTROL, I, exec, bruh - 10"
+                "$mainMod CONTROL, O, exec, bruh + 10"
                 "$mainMod SHIFT, S, exec, hyprshot --m region"
                 
                 # --- Window Management ---
@@ -65,14 +74,20 @@ in
                 "$mainMod CONTROL, backslash, workspace, 2"
                 "$mainMod CONTROL, Z, workspace, 3"
                 "$mainMod CONTROL, X, workspace, 4"
-                "$mainMod CONTROL, period, workspace, 5"
+                "$mainMod CONTROL, N, workspace, 5"
+                "$mainMod CONTROL, M, workspace, 6"
+                "$mainMod CONTROL, comma, workspace, 7"
+                "$mainMod CONTROL, period, workspace, 8"
 
                 # Move active window to a workspace with mainMod + SHIFT + [0-9]
                 "CONTROL ALT, Shift_L, movetoworkspace, 1"
                 "CONTROL ALT, backslash, movetoworkspace, 2"
                 "CONTROL ALT, Z, movetoworkspace, 3"
                 "CONTROL ALT, X, movetoworkspace, 4"
-                "CONTROL ALT, period, movetoworkspace, 5"
+                "CONTROL ALT, N, movetoworkspace, 5"
+                "CONTROL ALT, M, movetoworkspace, 6"
+                "CONTROL ALT, comma, movetoworkspace, 7"
+                "CONTROL ALT, period, movetoworkspace, 8"
 
                 # <wl-kbptr> and <wlrctl>
                 "$mainMod, M, exec, wl-kbptr"

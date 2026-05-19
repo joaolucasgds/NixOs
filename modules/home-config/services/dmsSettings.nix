@@ -115,29 +115,27 @@ in
             ReadWritePaths = [ "%h/.config/DankMaterialShell" ];
 
             ExecStart = "${pkgs.writeShellScript "dms-inject" ''
-                TARGET_MODEL="${hostvars.primaryMonitorModel}"
-                DEFAULT_MODEL="${hostvars.defaultMonitorModel}"
+                TARGET_PORT="${hostvars.prMonitor}"
+                DEFAULT_PORT="${hostvars.seMonitor}"
                 
                 TEMPLATE="$HOME/.config/DankMaterialShell/settings-template.json"
                 REAL_SETTINGS="$HOME/.config/DankMaterialShell/settings.json"
 
-                # 1. Ask Hyprland if the PRIMARY monitor is plugged in
-                PORT_NAME=$(${pkgs.hyprland}/bin/hyprctl monitors -j | ${pkgs.jq}/bin/jq -r ".[] | select(.model == \"$TARGET_MODEL\") | .name")
+                # Fetch the JSON snippet for the monitors if they exist
+                PR_JSON=$(${pkgs.hyprland}/bin/hyprctl monitors -j | ${pkgs.jq}/bin/jq -r ".[] | select(.name == \"$TARGET_PORT\")")
+                SE_JSON=$(${pkgs.hyprland}/bin/hyprctl monitors -j | ${pkgs.jq}/bin/jq -r ".[] | select(.name == \"$DEFAULT_PORT\")")
 
-                if [ -n "$PORT_NAME" ]; then
-                    # PRIMARY found: Take the TEMPLATE, inject the primary port, save as REAL_SETTINGS
-                    ${pkgs.jq}/bin/jq ".barConfigs[0].screenPreferences = [{\"name\": \"$PORT_NAME\", \"model\": \"$TARGET_MODEL\"}] | .barConfigs[0].showOnLastDisplay = false" "$TEMPLATE" > "$REAL_SETTINGS"
+                if [ -n "$PR_JSON" ]; then
+                    # PRIMARY found: Extract the real description string for DMS
+                    REAL_MODEL=$(echo "$PR_JSON" | ${pkgs.jq}/bin/jq -r ".description")
+                    ${pkgs.jq}/bin/jq ".barConfigs[0].screenPreferences = [{\"name\": \"$TARGET_PORT\", \"model\": \"$REAL_MODEL\"}] | .barConfigs[0].showOnLastDisplay = false" "$TEMPLATE" > "$REAL_SETTINGS"
+                elif [ -n "$SE_JSON" ]; then
+                    # DEFAULT found: Extract the real description string for DMS
+                    REAL_MODEL=$(echo "$SE_JSON" | ${pkgs.jq}/bin/jq -r ".description")
+                    ${pkgs.jq}/bin/jq ".barConfigs[0].screenPreferences = [{\"name\": \"$DEFAULT_PORT\", \"model\": \"$REAL_MODEL\"}] | .barConfigs[0].showOnLastDisplay = false" "$TEMPLATE" > "$REAL_SETTINGS"
                 else
-                    # 2. PRIMARY missing: Ask Hyprland for the DEFAULT monitor's port
-                    DEFAULT_PORT=$(${pkgs.hyprland}/bin/hyprctl monitors -j | ${pkgs.jq}/bin/jq -r ".[] | select(.model == \"$DEFAULT_MODEL\") | .name")
-                    
-                    if [ -n "$DEFAULT_PORT" ]; then
-                        # DEFAULT found: Take the TEMPLATE, inject the default port, save as REAL_SETTINGS
-                        ${pkgs.jq}/bin/jq ".barConfigs[0].screenPreferences = [{\"name\": \"$DEFAULT_PORT\", \"model\": \"$DEFAULT_MODEL\"}] | .barConfigs[0].showOnLastDisplay = false" "$TEMPLATE" > "$REAL_SETTINGS"
-                    else
-                        # 3. ULTIMATE FALLBACK: Clear preferences and fallback to last display
-                        ${pkgs.jq}/bin/jq ".barConfigs[0].screenPreferences = [] | .barConfigs[0].showOnLastDisplay = true" "$TEMPLATE" > "$REAL_SETTINGS"
-                    fi
+                    # 3. ULTIMATE FALLBACK: Clear preferences and fallback to last display
+                    ${pkgs.jq}/bin/jq ".barConfigs[0].screenPreferences = [] | .barConfigs[0].showOnLastDisplay = true" "$TEMPLATE" > "$REAL_SETTINGS"
                 fi
             ''}";
         };
