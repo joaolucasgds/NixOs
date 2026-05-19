@@ -1,22 +1,15 @@
+let
+    desktopList = [ "hyprland" "gnome"];
+    videoList = [ "nvidia" "amd" "intel" ];
+in
+
 {
-    primaryMonitorModel = "AOC 24G4";
-    primaryMonitorSerial = "12VOAXA000696";
-
-    defaultMonitorModel = "Chimei Innolux Corporation 0x1552";
-    defaultMonitorSerial = ""; #Serial is empty
-
-    DMSprimaryMonitorModel = "24G4";
-    DMSprimaryMonitorSerial = "12VOAXA000696";
-    DMSdefaultMonitorModel = "0x1552";
-
-    desktop = "hyprland";
-    #desktop = "gnome";
-
-    video = "nvidia";
-    # video = "amd";
-    # video = "intel";
-
     host = "LoqNix";
-}
+    desktop = builtins.elemAt desktopList 0;
+    video = builtins.elemAt videoList 0;
 
+    # Monitor setup Details | hw-info to find data
+    primaryMonitorModel = "AOC 24G4";
+    defaultMonitorModel = "Chimei Innolux Corporation 0x1552";
+}
 
