@@ -11,12 +11,16 @@
 
             fastfetch
 
-            la() {
+            3() {
                 ssh-add -l >/dev/null 2>&1 || eval "$(keychain --eval --quiet ~/.ssh/github-signing)"
                 command lazygit "$@"
             }
 
-            n() {
+            2(){
+                y
+            }
+
+            1() {
                 command nvim "$@"
             }
             
