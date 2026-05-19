@@ -1,8 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, hostvars, ... }:
 
 let
     email = "joaolucasgdesouza@gmail.com";
-    pubKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgZ1T0HJbldDUbQR1OwLym/46ECcYySP1VQslBTNjTt joaolucasgdesouza@gmail.com";
 in
 
 {
@@ -12,7 +11,7 @@ in
         settings = {
             user = {
                 name = "Joao Lucas Gomes de Souza";
-                email = email;
+                inherit email;
             };
 
             gpg = {
@@ -30,6 +29,6 @@ in
     };
 
     home.file.".config/git/allowed_signers".text = ''
-        ${email} ${pubKey}
+        ${email} ${hostvars.gitSigningPubKey}
     '';
 }

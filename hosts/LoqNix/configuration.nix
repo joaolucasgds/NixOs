@@ -17,7 +17,7 @@ in
     networking.hostName = hostvars.host; 
     networking.networkmanager.enable = true;
 
-    boot.kernelPackages = pkgs.linuxPackages_zen;
+    boot.kernelPackages = pkgs.${hostvars.kernel};
     boot.loader.efi.canTouchEfiVariables = true;
 
     #i2c needed for ddcutil

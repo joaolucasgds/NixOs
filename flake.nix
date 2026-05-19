@@ -41,16 +41,21 @@
         };
     };
 
-    outputs = { nixpkgs, ... }@inputs: {
+    outputs = { nixpkgs, ... }@inputs: 
+        let
+            hostNameList = [ "LoqNix" ];
+            choosenHost = builtins.elemAt hostNameList 0;
+        in
+    {
         nixosConfigurations = {
-            "LoqNix" = nixpkgs.lib.nixosSystem{
+            "${choosenHost}" = nixpkgs.lib.nixosSystem{
                 system = "x86_64-linux";
                 specialArgs = { 
                     inherit inputs;
-                    hostvars = import ./hosts/loq/variables.nix;
+                    hostvars = import ./hosts/${choosenHost}/variables.nix { inherit choosenHost; };
                 };
                 modules = [
-                    ./hosts/loq/configuration.nix
+                    ./hosts/${choosenHost}/configuration.nix
                 ];
             };
         };
