@@ -42,7 +42,7 @@ in
 
                 "$mainMod CONTROL, TAB, killactive"
                 "$mainMod CONTROL, TAB, exec, dms ipc call bar reveal index 0" #also revel bar
-                "CONTROL ALT, Caps_Lock, exec, $terminal"
+                "CONTROL ALT, Q, exec, $terminal"
                 "CONTROL ALT, S, exec, zen-beta"
                 "CONTROL ALT, D, exec, vesktop"
                 "CONTROL ALT, P, exec, proton-pass"
