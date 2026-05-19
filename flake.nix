@@ -44,6 +44,7 @@
     outputs = { nixpkgs, ... }@inputs: 
         let
             hostNameList = [ "LoqNix" ];
+
             choosenHost = builtins.elemAt hostNameList 0;
         in
     {
