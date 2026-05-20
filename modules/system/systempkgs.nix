@@ -46,19 +46,21 @@
 
     # --- System Configured Programs ---
 
-    programs.gpu-screen-recorder = {
-        enable = true;
-    };
+    programs = {
+        gpu-screen-recorder = {
+            enable = true;
+        };
 
-    programs.virt-manager = {
-        enable = true;
-    };
+        virt-manager = {
+            enable = true;
+        };
 
-    # Gaming Optimization
-    programs.gamemode.enable = true;
+        # Gaming Optimization
+        gamemode.enable = true;
 
-    # Steam Platform
-    programs.steam = {
-        enable = true;
+        # Steam Platform
+        steam = {
+            enable = true;
+        };
     };
 }
