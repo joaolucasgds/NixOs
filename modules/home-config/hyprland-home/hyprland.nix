@@ -56,7 +56,7 @@ in
                 "$mainMod CONTROL, O, exec, bruh + 10"
 
                 "$mainMod SHIFT, S, exec, hyprshot --m region"
-                "Print, S, exec, hyprshot --m output"
+                ", Print, exec, hyprshot --m output"
                 
                 # --- Window Management ---
             
