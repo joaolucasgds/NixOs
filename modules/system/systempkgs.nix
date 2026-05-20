@@ -1,6 +1,7 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 
 {
+
     environment.systemPackages = with pkgs; [
         
         # --- System & Hardware Utilities ---
@@ -10,8 +11,10 @@
         tree                # Directory visualization
         wl-clipboard        # Command line clipboard (Wayland)
         fastfetch
-        p7zip  # Required by Yazi for almost all archive operations
-        unzip
+        gpu-screen-recorder
+        inputs.gsr-ui-nix.packages.${pkgs.system}.gpu-screen-recorder-notification
+        killall
+        jq
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)

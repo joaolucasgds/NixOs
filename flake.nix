@@ -39,6 +39,11 @@
             url = "github:AvengeMedia/DankMaterialShell/stable";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        gsr-ui-nix = {
+            url = "github:rPlakama/gsr-ui-nix?rev=e03198a83a267f401e9901b5fd7307483ef11aad"; #Using hash cause i dont trust
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = { nixpkgs, ... }@inputs: 

@@ -19,10 +19,10 @@
             "org.jellyfin.JellyfinDesktop"
 
             # --- Tools & Utilities ---
-            "com.dec05eba.gpu_screen_recorder"
             "app.drey.Warp"
 	        "dev.bragefuglseth.Keypunch"
             "com.pikatorrent.PikaTorrent"
+            "org.gnome.SoundRecorder"
 
             # --- Gaming ---
             "org.vinegarhq.Sober"
