@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: 
+{ inputs, pkgs, hostvars, ... }: 
 
 {
     imports = [ inputs.lanzaboote.nixosModules.lanzaboote ];
@@ -17,6 +17,8 @@
 	        autoReboot = true;
 	    };
     };
+
+    boot.loader.timeout = hostvars.bootloaderTimeout;
   
     environment.systemPackages = [ pkgs.sbctl ];
 }
