@@ -198,6 +198,15 @@ in
             bindl = , XF86AudioNext, exec, playerctl next
             bindl = , XF86AudioPrev, exec, playerctl previous
 
+            # --- Manual Record Toggle ---
+            bind = "SHIFT_L ALT_L, F9, exec, killall -SIGINT gpu-screen-recorder && gsr-notify --text 'Recording ended' --timeout 3 --icon record || (gsr-notify --text 'Recording started' --timeout 3 --icon record && gpu-screen-recorder -w \"$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')\" -c mp4 -ac opus -cursor yes -cr full -fm cfr -k ${videoCodec} -encoder gpu -f 60 -v no -o ~/Videos/Temporary/Video_$(date +%Y-%m-%d_%H-%M-%S).mp4 -bm cbr -q 40000 -a app-inverse: -restore-portal-session yes)"
+
+            # --- Replay Buffer Toggle ---
+            bind = "SHIFT_L ALT_L, F10, exec, killall -SIGINT gpu-screen-recorder && gsr-notify --text 'Replay buffer ended' --timeout 3 --icon replay || ( gsr-notify --text 'Replay buffer started' --timeout 3 --icon replay && gpu-screen-recorder -w \"$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')\" -c mp4 -ac opus -cursor yes -cr full -fm cfr -k ${videoCodec} -encoder gpu -f 60 -r 180 -v no -o ~/Videos/Games -restart-replay-on-save yes -replay-storage ram -bm cbr -q 60000 -a app-inverse: -restore-portal-session yes -ro ~/Videos/Temporary)"
+
+            # --- Save Replay ---
+            bind = "ALT_L, F10, exec, killall -SIGUSR1 gpu-screen-recorder && gsr-notify --text 'Clip saved' --timeout 3 --icon replay"
+
             submap = reset
         '';
     };
