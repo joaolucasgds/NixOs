@@ -189,7 +189,10 @@ in
             bind = $mainMod CONTROL, backslash, workspace, 2
             bind = $mainMod CONTROL, Z, workspace, 3
             bind = $mainMod CONTROL, X, workspace, 4
-            bind = $mainMod CONTROL, period, workspace, 5
+            bind = $mainMod CONTROL, N, workspace, 5
+            bind = $mainMod CONTROL, M, workspace, 6
+            bind = $mainMod CONTROL, comma, workspace, 7
+            bind = $mainMod CONTROL, period, workspace, 8
 
             # --- Media and Brightness Bindings ---
 
