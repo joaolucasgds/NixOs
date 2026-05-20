@@ -11,7 +11,6 @@
         tree                # Directory visualization
         wl-clipboard        # Command line clipboard (Wayland)
         fastfetch
-        gpu-screen-recorder
         inputs.gsr-ui-nix.packages.${pkgs.system}.gpu-screen-recorder-notification
         killall
         jq
@@ -46,6 +45,10 @@
     ];
 
     # --- System Configured Programs ---
+
+    programs.gpu-screen-recorder = {
+        enable = true;
+    };
 
     programs.virt-manager = {
         enable = true;
