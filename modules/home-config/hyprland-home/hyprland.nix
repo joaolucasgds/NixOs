@@ -3,7 +3,7 @@
 let
     masterWallpaperDir = "${config.home.homeDirectory}/Pictures/Wallpapers";
     defaultWallpaper = "${masterWallpaperDir}/makima.png";
-    videoCodec = if hostvars.video == "nvidia" then "hevc_10bit" else "h264";
+    videoCodec = "hevc_10bit";
 in
 
 {
