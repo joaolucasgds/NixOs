@@ -18,11 +18,8 @@ let
         ./programs/vesktop.nix
         ./programs/bruh.nix
         ./programs/zen-browser.nix
-        #Flatpak settings
-        ./flatpak-settings/gpu-screen-recorder-ui-flatpak.nix
         #User systemd services
         ./services/cleanhome.nix
-        ./services/gpu-screen-recorder.nix
         ./services/vesktop.nix
     ];
 
