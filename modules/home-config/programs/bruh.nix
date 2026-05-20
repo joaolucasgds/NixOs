@@ -1,25 +1,49 @@
-{ pkgs, ... }:
+{ pkgs, hostvars, ... }:
 
 {
     home.packages = [
-	    (pkgs.writeShellScriptBin "bruh" ''
+        (pkgs.writeShellScriptBin "bruh" ''
             operator=$1
             value=$2
-            laptopDisplayMinimunBrightnessValue=50
+            displayMBV=${toString hostvars.displayMBV}
+            laptopDisplayMBV=${toString hostvars.laptopDisplayMBV}
 
-            # KILL previous instances so they don't fight for the I2C bus
-            pkill -f "ddcutil --display 1 setvcp 10" || true
+            # --- 1. External Monitor Control (DDCUtil) ---
+            for display in $(${pkgs.ddcutil}/bin/ddcutil detect --brief | awk '/Display/ {print $2}'); do
+                currentExt=$(${pkgs.ddcutil}/bin/ddcutil --display "$display" getvcp 10 --brief | awk '{print $4}')
 
-            ${pkgs.brightnessctl}/bin/brightnessctl set $value$operator
+                if [ "$operator" = "+" ]; then
+                    targetExt=$((currentExt + value))
+                else
+                    targetExt=$((currentExt - value))
+                fi
 
-            ${pkgs.ddcutil}/bin/ddcutil --display 1 setvcp 10 "$operator" "$value" > /dev/null 2>&1 &
+                if [ "$targetExt" -lt "$displayMBV" ]; then
+                    targetExt=$displayMBV
+                fi
 
-            #The choice to make the lowest value possible on the laptop screen be "50" was made because 50 is equal to my main monitor 0 value;
-            #Guess i will have to change this if i ever get another laptop
-            currentLaptopDisplayBrightnessValue=$(${pkgs.brightnessctl}/bin/brightnessctl get)
+                ${pkgs.ddcutil}/bin/ddcutil --display "$display" setvcp 10 "$targetExt" &
+                setsid gsr-notify --text "Monitor brightness $targetExt" --timeout 3 --bg-color FFFF00 > /dev/null 2>&1 &
+            done
 
-            if [ "$currentLaptopDisplayBrightnessValue" -lt "$laptopDisplayMinimunBrightnessValue" ]; then
-            ${pkgs.brightnessctl}/bin/brightnessctl set $laptopDisplayMinimunBrightnessValue
+            # --- 2. Laptop Screen Control (Anti-Flicker Logic) ---
+            if [ -d "/sys/class/backlight" ] && [ "$(ls -A /sys/class/backlight)" ]; then
+            currentVal=$(${pkgs.brightnessctl}/bin/brightnessctl get)
+
+            # Calculate new target
+            if [ "$operator" = "+" ]; then
+                newVal=$((currentVal + value))
+            else
+                newVal=$((currentVal - value))
+            fi
+
+            # Clamp to minimum
+            if [ "$newVal" -lt "$laptopDisplayMBV" ]; then newVal=$laptopDisplayMBV; fi
+
+            # ONLY SET if the value is actually different
+            if [ "$newVal" -ne "$currentVal" ]; then
+                ${pkgs.brightnessctl}/bin/brightnessctl set "$newVal"
+            fi
             fi
         '')
     ];
