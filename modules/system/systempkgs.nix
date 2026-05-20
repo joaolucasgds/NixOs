@@ -16,6 +16,7 @@
         jq
         warp
         motrix
+        pulseaudio
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
