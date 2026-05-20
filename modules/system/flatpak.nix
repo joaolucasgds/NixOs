@@ -14,20 +14,7 @@
         uninstallUnmanaged = true;
 
         packages = [
-            # --- Browsing & Media ---
-            "io.freetubeapp.FreeTube"
-            "org.jellyfin.JellyfinDesktop"
-
-            # --- Tools & Utilities ---
-            "app.drey.Warp"
-	        "dev.bragefuglseth.Keypunch"
-            "com.pikatorrent.PikaTorrent"
-            "org.gnome.SoundRecorder"
-
-            # --- Gaming ---
-            "org.vinegarhq.Sober"
-            "com.heroicgameslauncher.hgl"
-            "com.modrinth.ModrinthApp"
+            #Nothing
         ];
     };
 }

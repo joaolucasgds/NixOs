@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, lib, inputs, hostvars, ... }:
 
 {
 
@@ -14,6 +14,8 @@
         inputs.gsr-ui-nix.packages.${pkgs.system}.gpu-screen-recorder-notification
         killall
         jq
+        warp
+        motrix
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
@@ -30,13 +32,30 @@
         # --- Media & Entertainment ---
         pear-desktop        # YouTube Music Client
         veracrypt           # Encryption tool (Commented out: build failure Jan 2026)
+        heroic
+        keypunch
 
+    ] ++ lib.optionals (hostvars.video == "nvidia") [
+        (symlinkJoin {
+            name = "modrinth-app-wayland-fix";
+            paths = [ modrinth-app ];
+            buildInputs = [ makeWrapper ];
+            postBuild = ''
+                wrapProgram $out/bin/ModrinthApp \
+                --set WEBKIT_DISABLE_DMABUF_RENDERER 1
+            '';
+        })
+    ] ++ lib.optionals (hostvars.video != "nvidia") [
+        modrinth-app
     ];
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
         "nvidia-x11"
 
         "veracrypt"
+
+        "modrinth-app"
+        "modrinth-app-unwrapped"
 
         "steam"
         "steam-unwrapped"
