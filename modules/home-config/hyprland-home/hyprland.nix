@@ -53,7 +53,9 @@ in
                 "CONTROL ALT, W, exec, dms ipc wallpaperCarousel toggle"
                 "$mainMod CONTROL, I, exec, bruh - 10"
                 "$mainMod CONTROL, O, exec, bruh + 10"
+
                 "$mainMod SHIFT, S, exec, hyprshot --m region"
+                "Print, S, exec, hyprshot --m output"
                 
                 # --- Window Management ---
             
