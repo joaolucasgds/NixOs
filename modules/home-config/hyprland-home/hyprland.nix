@@ -93,7 +93,7 @@ in
                 "CONTROL ALT, period, movetoworkspace, 8"
 
                 # <wl-kbptr> and <wlrctl>
-                "$mainMod, M, exec, wl-kbptr"
+                "$mainMod, M, exec, killall -q wl-kbptr || wl-kbptr"
 
                 "$mainMod, E, exec, wlrctl pointer click right"
                 "$mainMod, W, exec, wlrctl pointer click left"
