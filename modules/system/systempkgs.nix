@@ -24,6 +24,7 @@
         android-studio
         gradle
         qemu
+        jdk21
 
         # --- Internet & Communication ---
         brave               # Browser
