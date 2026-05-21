@@ -25,6 +25,7 @@
         gradle
         qemu
         jdk21
+        jdk25
 
         # --- Internet & Communication ---
         brave               # Browser
