@@ -1,4 +1,4 @@
-{ hostvars, ... }:
+{ hostvars, config, ... }:
 
 {
     programs.bash = {
@@ -26,6 +26,10 @@
             
             rebuild() {
                 sudo nixos-rebuild switch --flake ~/nixos/#${hostvars.host}
+            }
+
+            config(){
+                cd ${config.home.homeDirectory}nixos/
             }
 
             uefi() {
