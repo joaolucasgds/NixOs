@@ -29,7 +29,7 @@
             }
 
             config(){
-                cd ${config.home.homeDirectory}nixos/
+                cd ${config.home.homeDirectory}/nixos/
             }
 
             uefi() {
