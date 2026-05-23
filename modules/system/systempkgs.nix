@@ -17,6 +17,7 @@
         warp
         motrix
         pulseaudio
+        ncdu
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
