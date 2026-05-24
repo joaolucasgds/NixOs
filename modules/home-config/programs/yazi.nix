@@ -1,4 +1,4 @@
-{ ... }:
+__:
 
 {
     programs.yazi = {
@@ -24,11 +24,21 @@
                     { mime = "image/*"; use = "play"; }
                     { mime = "application/pdf"; use = "browser"; }
                     { mime = "text/html"; use = "browser"; }
-                    
+
                     # Catch-all for files without a specific mime rule
                     { mime = "*"; use = "edit"; }
                 ];
             };
+        };
+
+        keymap = {
+            mgr.prepend_keymap = [
+                {
+                    on = [ "i" ];
+                    run = ''shell -- xdragon -a -x %s'';
+                    desc = "Drag and drop selected files";
+                }
+            ];
         };
 
         theme = {
