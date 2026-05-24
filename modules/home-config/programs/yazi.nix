@@ -13,12 +13,17 @@
                 play = [
                     { run = ''mpv "$@"''; orphan = true; desc = "mpv"; }
                 ];
+                browser = [
+                    { run = ''zen-beta "$@"''; orphan = true; desc = "Browser"; }
+                ];
             };
             open = {
                 rules = [
                     { mime = "text/*"; use = "edit"; }
                     { mime = "video/*"; use = "play"; }
                     { mime = "image/*"; use = "play"; }
+                    { mime = "application/pdf"; use = "browser"; }
+                    { mime = "text/html"; use = "browser"; }
                     
                     # Catch-all for files without a specific mime rule
                     { mime = "*"; use = "edit"; }
