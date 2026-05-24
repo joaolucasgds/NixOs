@@ -18,6 +18,7 @@
         motrix
         pulseaudio
         ncdu
+        dragon-drop
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
