@@ -1,4 +1,4 @@
-{ hostvars, config, ... }:
+{ hostvars, config, lib, ... }:
 
 {
     programs.bash = {
@@ -41,7 +41,14 @@
                 sudo mount -o rw,uid=$(id -u),gid=$(id -g) "$1" /mnt/usb
                 yazi /mnt/usb/
             }
+        '' + lib.optionalString (hostvars.windowsBootEntry != "") '' 
+
+            windows() {
+                sudo efibootmgr -n ${hostvars.windowsBootEntry}
+                reboot
+            }
         '';
+
         bashrcExtra = ''
             export PS1="\[\033[38;5;4m\]\u@\h \w \$ \[\033[0m\]"
         '';

@@ -15,6 +15,9 @@ in
 
     bootloaderTimeout = 0;
 
+    #efibootmgr to discover
+    windowsBootEntry = "0004";
+
     #automatic github key would be better
     gitSigningPubKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAgZ1T0HJbldDUbQR1OwLym/46ECcYySP1VQslBTNjTt joaolucasgdesouza@gmail.com";
 

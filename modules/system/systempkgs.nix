@@ -19,6 +19,7 @@
         pulseaudio
         ncdu
         dragon-drop
+        efibootmgr
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
