@@ -33,6 +33,10 @@ __:
             };
         };
 
+        tailscale = {
+            enable = true;
+        };
+
         # Printing (Disabled for now)
         printing.enable = false;
 
