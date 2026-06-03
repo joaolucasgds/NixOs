@@ -45,7 +45,7 @@
 
             windows() {
                 sudo efibootmgr -n ${hostvars.windowsBootEntry}
-                reboot
+                sudo reboot
             }
         '';
 
