@@ -3,7 +3,7 @@
 {
     imports = [
         ./hyprland.nix
-        ./tuigreet.nix
         ./pkgs.nix
+        ./greetd.nix
     ];
 }
