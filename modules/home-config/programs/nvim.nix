@@ -97,6 +97,8 @@
                     providers.wl-copy.enable = true;
                     registers = "unnamedplus";
                 };
+
+                mini.pairs.enable = true;
             
                 #test harpoon soon
                 autocomplete.blink-cmp.enable = true;
