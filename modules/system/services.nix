@@ -45,7 +45,7 @@ __:
         };
 
         journald.extraConfig = ''
-            MaxRetentionSec=1month
+            MaxRetentionSec=1week
             SystemMaxUse=1G
         '';
 
