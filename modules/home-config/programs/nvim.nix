@@ -90,7 +90,10 @@
                     # ];
                 };
 
-                utility.yazi-nvim.enable = true;
+                utility = {
+                    yazi-nvim.enable = true;
+                    motion.flash-nvim.enable = true;
+                };
 
                 clipboard = {
                     enable = true;
