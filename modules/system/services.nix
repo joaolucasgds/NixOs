@@ -37,6 +37,13 @@ __:
             enable = true;
         };
 
+        sunshine = {
+            enable = true;
+            autoStart = false;
+            capSysAdmin = true;
+            openFirewall = true;
+        };
+
         # Printing (Disabled for now)
         printing.enable = false;
 
