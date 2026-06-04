@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, ... }:
 
 {
     imports = [ inputs.nvf.homeManagerModules.nvf ];
@@ -99,6 +99,7 @@
                 };
 
                 mini.pairs.enable = true;
+
             
                 #test harpoon soon
                 autocomplete.blink-cmp.enable = true;
@@ -139,17 +140,20 @@
                     sectionSeparator = { left = ""; right = ""; };
                 };
     
-                visuals.nvim-web-devicons.enable = true;
+                visuals = {
+                    nvim-web-devicons.enable = true;
 
-                visuals.indent-blankline = {
-                    enable = true;
-                    setupOpts = {
-                        scope.enabled = true;
+                    indent-blankline = {
+                        enable = true;
+                        setupOpts = {
+                            scope.enabled = true;
+                        };
                     };
+
+                    fidget-nvim.enable = true;
                 };
 
                 presence.neocord.enable = true;
-
             };
         };
     };
