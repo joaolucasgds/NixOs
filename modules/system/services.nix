@@ -44,6 +44,11 @@ __:
             openFirewall = true;
         };
 
+        journald.extraConfig = ''
+            MaxRetentionSec=1month
+            SystemMaxUse=1G
+        '';
+
         # Printing (Disabled for now)
         printing.enable = false;
 
