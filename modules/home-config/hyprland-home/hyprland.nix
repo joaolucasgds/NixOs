@@ -15,6 +15,11 @@ in
         settings = {
             monitor = ", highrr, auto, 1";
 
+            misc = {
+                 disable_splash_rendering = true;
+                 disable_hyprland_logo = true;
+            };
+
             workspace = [
                 "1, monitor:${hostvars.prMonitor}, default:true"
                 "2, monitor:${hostvars.prMonitor}"
@@ -171,13 +176,14 @@ in
             };
 
             exec-once = [
-
+                "hyprctl dispatch submap nothing"
                 "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" #Gemini told me this would make DMS start faster
                 "fcitx5 -d -r"
                 "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
                 # Wait 3 seconds for the DMS IPC socket to initialize, then check/set the wallpaper.
                 # Added 2>/dev/null because on a TRUE first boot, session.json won't even exist yet.
                 "sh -c 'sleep 3 && if ! grep -q \"wallpaperPath\" ~/.local/state/DankMaterialShell/session.json 2>/dev/null; then dms ipc wallpaper set ${defaultWallpaper}; fi'"
+                "bash -c 'while ! hyprctl layers -j | grep -iq dms; do sleep 0.1; done; sleep 1; hyprctl dispatch submap reset'"
             ];
         };
 
@@ -222,6 +228,10 @@ in
             # --- Save Replay ---
             bind = ALT_L, F10, exec, killall -SIGUSR1 gpu-screen-recorder && gsr-notify --text 'Clip saved' --timeout 3 --icon replay
 
+            submap = reset
+            
+            submap = nothing
+            bind = SUPER SHIFT ALT CONTROL, F24, exec, true # dummy bind cause otherwise hyprland wont create the submap
             submap = reset
         '';
     };

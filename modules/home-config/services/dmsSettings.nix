@@ -25,6 +25,7 @@ let
         # --- System & Units ---
         windSpeedUnit = "ms";
         use24HourClock = false;
+        lockAtStartup = true;
 
         # --- Cursor ---
         cursorSettings = {

@@ -7,7 +7,7 @@
 
             initial_session = {
                 command = "start-hyprland";
-                user = "shotchannel"; 
+                user = "jl"; 
             };
 
             default_session = {
