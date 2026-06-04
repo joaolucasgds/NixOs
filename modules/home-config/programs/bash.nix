@@ -49,6 +49,10 @@
             stop_sunshine() {
                 systemctl --user stop sunshine
             }
+
+            status_sunshine() {
+                systemctl --user status sunshine
+            } 
         '' + lib.optionalString (hostvars.windowsBootEntry != "") '' 
 
             windows() {
