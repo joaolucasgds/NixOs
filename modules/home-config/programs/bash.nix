@@ -41,6 +41,14 @@
                 sudo mount -o rw,uid=$(id -u),gid=$(id -g) "$1" /mnt/usb
                 yazi /mnt/usb/
             }
+
+            start_sunshine() {
+                systemctl --user start sunshine
+            } 
+
+            stop_sunshine() {
+                systemctl --user stop sunshine
+            }
         '' + lib.optionalString (hostvars.windowsBootEntry != "") '' 
 
             windows() {
