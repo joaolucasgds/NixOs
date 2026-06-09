@@ -53,6 +53,14 @@
             status_sunshine() {
                 systemctl --user status sunshine
             } 
+
+            grun() {
+                ./gradlew run
+            }
+
+            rb(){
+                sudo systemctl restart bluetooth
+            }
         '' + lib.optionalString (hostvars.windowsBootEntry != "") '' 
 
             windows() {
