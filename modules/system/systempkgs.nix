@@ -20,6 +20,8 @@
         ncdu
         dragon-drop
         efibootmgr
+        gnome-clocks
+        gnome-sound-recorder
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
