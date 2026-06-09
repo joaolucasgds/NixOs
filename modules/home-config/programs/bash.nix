@@ -61,7 +61,7 @@
             rb(){
                 sudo systemctl restart bluetooth
             }
-        '' + lib.optionalString (hostvars.windowsBootEntry != "") '' 
+        '' + lib.optionalString (hostvars.windowsBootEntry != "None") '' 
 
             windows() {
                 sudo efibootmgr -n ${hostvars.windowsBootEntry}
