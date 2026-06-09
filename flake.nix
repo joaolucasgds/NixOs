@@ -49,21 +49,20 @@
     outputs = { nixpkgs, ... }@inputs: 
         let
             hostNameList = [ "LoqNix" ];
-
-            choosenHost = builtins.elemAt hostNameList 0;
         in
     {
-        nixosConfigurations = {
-            "${choosenHost}" = nixpkgs.lib.nixosSystem{
+        nixosConfigurations = builtins.listToAttrs (map (host: {
+            name = host;
+            value = nixpkgs.lib.nixosSystem{
                 system = "x86_64-linux";
                 specialArgs = { 
                     inherit inputs;
-                    hostvars = import ./hosts/${choosenHost}/variables.nix { inherit choosenHost; };
+                    hostvars = import ./hosts/${host}/variables.nix { choosenHost = host; };
                 };
                 modules = [
-                    ./hosts/${choosenHost}/configuration.nix
+                    ./hosts/${host}/configuration.nix
                 ];
             };
-        };
+        })hostNameList);
     };
 }
