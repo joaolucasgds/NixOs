@@ -3,15 +3,19 @@
 let
     powerMonitorScript = pkgs.writeShellScriptBin "power-monitor" ''
         #!/bin/bash
-        # Function to safely check if connected to AC power
+        
+        # Function to safely check if connected to AC power using bash built-ins (no forks)
         is_charging() {
-            # Loop through power supplies to find the main AC adapter
             for ps in /sys/class/power_supply/*; do
-                if [ -f "$ps/type" ] && [ "$(cat "$ps/type")" = "Mains" ]; then
-                    if [ "$(cat "$ps/online")" -eq 1 ]; then
-                        return 0 # True, it is charging
-                    else
-                        return 1 # False, it is discharging
+                if [ -f "$ps/type" ]; then
+                    read -r type < "$ps/type"
+                    if [ "$type" = "Mains" ]; then
+                        read -r online < "$ps/online"
+                        if [ "$online" -eq 1 ]; then
+                            return 0 # True, it is charging
+                        else
+                            return 1 # False, it is discharging
+                        fi
                     fi
                 fi
             done
@@ -25,24 +29,27 @@ let
 
         SHUTDOWN_PENDING=0
 
-        # 2. Loop Check: Keep checking as long as the machine is on
+        # 2. Adaptive Loop Check
         while true; do
-            if ! is_charging; then
-                # 3. Trigger Shutdown: If discharging and no shutdown is pending
-                if [ "$SHUTDOWN_PENDING" -eq 0 ]; then
-                    shutdown +2 "AC disconnected. Shutting down in 2 minutes."
-                    SHUTDOWN_PENDING=1
-                fi
-            else
-                # 4. Cancel Shutdown: If charge detected again while waiting to shutdown
+            if is_charging; then
+                # We have power. Cancel shutdown if one was pending.
                 if [ "$SHUTDOWN_PENDING" -eq 1 ]; then
-                    shutdown -c
+                    /run/current-system/sw/bin/shutdown -c
                     SHUTDOWN_PENDING=0
                 fi
+                
+                # Safe state: sleep for 180 seconds
+                sleep 180
+            else
+                # We lost power. Trigger shutdown if not already triggered.
+                if [ "$SHUTDOWN_PENDING" -eq 0 ]; then
+                    /run/current-system/sw/bin/shutdown +2 "AC disconnected. Shutting down in 2 minutes."
+                    SHUTDOWN_PENDING=1
+                fi
+                
+                # High-alert state: sleep for only 5 seconds to catch reconnection
+                sleep 5
             fi
-            
-            # Wait 3 minutes before checking again
-            sleep 180
         done
     '';
 in
@@ -60,4 +67,3 @@ in
         };
     };
 }
-
