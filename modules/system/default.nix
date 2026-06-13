@@ -17,6 +17,8 @@
 
     ] ++ lib.optionals ( hostvars.video == "nvidia") [
         ./nvidia.nix #Waiting for the day i can comment this out
+    ] ++ lib.optionals (hostvars.laptop) [
+        ./power-monitor.nix
     ];
 }
 
