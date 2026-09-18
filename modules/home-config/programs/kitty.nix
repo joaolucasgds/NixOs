@@ -1,4 +1,4 @@
-{ ... }:
+__:
 
 {
     programs.kitty = {
@@ -8,7 +8,8 @@
             confirm_os_window_close = 0;
             # Window Settings
             background_opacity = "0.5";
-            background_blur = "1";
+            transparent_background_colors = "#232a2e@0.85 #2b3337@0.85";#make nvim trasnparent
+            window_padding_width = "0";
             hide_window_decorations = "yes";
             
             # Dimensions (Kitty requires 'c' to denote cells/columns instead of pixels)
