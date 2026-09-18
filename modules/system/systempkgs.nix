@@ -21,6 +21,7 @@
         dragon-drop
         efibootmgr
         gnome-sound-recorder
+        sqlitebrowser
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
