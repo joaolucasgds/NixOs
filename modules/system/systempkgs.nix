@@ -20,7 +20,6 @@
         ncdu
         dragon-drop
         efibootmgr
-        gnome-clocks
         gnome-sound-recorder
 
         # --- Development & Git ---
