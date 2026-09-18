@@ -1,8 +1,8 @@
 { choosenHost }:
 
 let
-    #                       0                      1                          2
-    kernelList =  [ "linuxPackages_zen" "linuxPackages_xanmod" "linuxPackages_xanmod_latest" ];
+    #                       0                      1                          2                      3
+    kernelList =  [ "linuxPackages_latest" "linuxPackages_zen" "linuxPackages_xanmod" "linuxPackages_xanmod_latest" ];
     #                   0         1    2
     desktopList = [ "hyprland" "gnome" "" ];
     #                0       1      2
