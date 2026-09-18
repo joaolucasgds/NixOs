@@ -7,7 +7,6 @@
         ./hyprland-home/DankMaterialShell.nix
         ./hyprland-home/theming.nix
 
-        ./programs/hyprshot.nix
         ./programs/yazi.nix
         ./programs/mpv.nix
         ./programs/keychain.nix
