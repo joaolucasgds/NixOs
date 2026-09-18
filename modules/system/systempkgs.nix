@@ -22,6 +22,7 @@
         efibootmgr
         gnome-sound-recorder
         sqlitebrowser
+        scrcpy
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
