@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ./hyprland-home/hyprland.nix
+        ./hyprland-home/hyprlandlua.nix
         ./hyprland-home/hyprportal.nix
         ./hyprland-home/DankMaterialShell.nix
         ./hyprland-home/theming.nix
