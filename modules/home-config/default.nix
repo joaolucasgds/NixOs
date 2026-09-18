@@ -17,6 +17,7 @@ let
         ./programs/nvim.nix
         ./programs/vesktop.nix
         ./programs/bruh.nix
+        ./programs/gsr-toggle.nix
         ./programs/zen-browser.nix
         #User systemd services
         ./services/cleanhome.nix
