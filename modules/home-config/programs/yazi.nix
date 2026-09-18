@@ -8,13 +8,13 @@ __:
         settings = {
             opener = {
                 edit = [
-                    { run = ''nvim "$@"''; block = true; desc = "Neovim"; }
+                    { run = "nvim %s"; block = true; desc = "Neovim"; }
                 ];
                 play = [
-                    { run = ''mpv "$@"''; orphan = true; desc = "mpv"; }
+                    { run = "mpv %s"; orphan = true; desc = "mpv"; }
                 ];
                 browser = [
-                    { run = ''zen-beta "$@"''; orphan = true; desc = "Browser"; }
+                    { run = "zen-beta %s"; orphan = true; desc = "Browser"; }
                 ];
             };
             open = {
