@@ -18,6 +18,9 @@ __:
             set -g status off
             # Toggle status bar visibility with Prefix + b
             bind-key b set-option -g status
+            #Toggle tmux window resize
+            bind -n F10 set -g window-size latest \; display-message "Resize: Auto"
+            bind -n F11 set -g window-size manual \; display-message "Resize: Manual"
         '';
     };
 }
