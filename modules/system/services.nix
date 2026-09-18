@@ -44,10 +44,10 @@ __:
             openFirewall = true;
         };
 
-        journald.extraConfig = ''
-            MaxRetentionSec=1week
-            SystemMaxUse=1G
-        '';
+        journald.settings.Journal = {
+            MaxRetentionSec = "1week";
+            SystemMaxUse = "1G";
+        };
 
         # Printing (Disabled for now)
         printing.enable = false;
