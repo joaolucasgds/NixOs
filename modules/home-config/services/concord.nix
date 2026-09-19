@@ -12,7 +12,7 @@
             RemainAfterExit = true;
             Environment = "TMUX_TMPDIR=%t";
 
-            ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.tmux}/bin/tmux has-session -t default 2>/dev/null || (${pkgs.tmux}/bin/tmux new-session -d -s default -n concord /etc/profiles/per-user/${config.home.username}/bin/concord && ${pkgs.tmux}/bin/tmux new-window -t default:1)'";
+            ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.tmux}/bin/tmux has-session -t concord 2>/dev/null || ${pkgs.tmux}/bin/tmux new-session -d -s concord /etc/profiles/per-user/${config.home.username}/bin/concord'";
         };
 
         Install = {

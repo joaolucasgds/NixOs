@@ -89,7 +89,7 @@ in
             hl.bind("CONTROL + ALT + TAB", hl.dsp.exec_cmd("dms ipc call bar reveal index 0"))
             hl.bind("CONTROL + SHIFT + Q", hl.dsp.exec_cmd(terminal))
             hl.bind("CONTROL + SHIFT + S", hl.dsp.exec_cmd("zen-beta"))
-            hl.bind("CONTROL + SHIFT + D", hl.dsp.exec_cmd("vesktop"))
+            hl.bind("CONTROL + SHIFT + D", hl.dsp.exec_cmd("kitty -e tmux attach -t concord:0"))
             hl.bind("CONTROL + SHIFT + 1", hl.dsp.exec_cmd("proton-pass"))
             hl.bind("CONTROL + SHIFT + 2", hl.dsp.exec_cmd("protonvpn-app"))
             hl.bind("CONTROL + SHIFT + A", hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
