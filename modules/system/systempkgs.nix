@@ -23,6 +23,7 @@
         gnome-sound-recorder
         sqlitebrowser
         scrcpy
+        android-tools
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
