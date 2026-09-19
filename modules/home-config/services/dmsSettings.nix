@@ -25,7 +25,7 @@ let
         # --- System & Units ---
         windSpeedUnit = "ms";
         use24HourClock = false;
-        lockAtStartup = true;
+        lockAtStartup = false;
         lockScreenShowProfileImage = false;
 
         # --- Cursor ---
