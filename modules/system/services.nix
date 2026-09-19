@@ -49,10 +49,13 @@ __:
             SystemMaxUse = "1G";
         };
 
+        gnome.gnome-keyring.enable = true;
+
         # Printing (Disabled for now)
         printing.enable = false;
 
         #sched_ext maybe i will try this again someday
     };
+    security.pam.services.login.enableGnomeKeyring = true;
 }
 
