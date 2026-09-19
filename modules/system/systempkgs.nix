@@ -80,6 +80,9 @@
     programs = {
         gpu-screen-recorder = {
             enable = true;
+            package = pkgs.gpu-screen-recorder.override {
+                ffmpeg = pkgs.ffmpeg_6;
+            };
         };
 
         virt-manager = {
