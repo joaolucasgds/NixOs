@@ -6,22 +6,8 @@
 	    initExtra = ''
             # Auto-start tmux unless we are already inside it or in a Nix shell
             if [[ -z "$TMUX" && -z "$IN_NIX_SHELL" && $- == *i* ]]; then
-                if ! tmux has-session -t default 2>/dev/null; then
-                    tmux new-session -d -s default -n concord 'concord'
-                    tmux new-window -t default:1
-                    exec tmux attach-session -t default:1
-                else
-                    exec tmux attach-session -t default
-                fi
+                exec tmux new-session -A -s default
             fi
-
-#             if [[ -z "$TMUX" && -z "$IN_NIX_SHELL" && $- == *i* ]]; then
-# -                exec tmux new-session -A -s default
-#             fi
-
-            # concord() {
-            #     tmux select-window -t :0
-            # }
 
             fastfetch
 

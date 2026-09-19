@@ -21,6 +21,7 @@ let
         ./programs/zen-browser.nix
         #User systemd services
         ./services/cleanhome.nix
+        ./services/concord.nix
     ];
 
     hyprlandHome = lib.optionals (hostvars.desktop == "hyprland") [
