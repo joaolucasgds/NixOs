@@ -89,6 +89,8 @@ in
             hl.bind("CONTROL + ALT + TAB", hl.dsp.exec_cmd("dms ipc call bar reveal index 0"))
             hl.bind("CONTROL + SHIFT + Q", hl.dsp.exec_cmd(terminal))
             hl.bind("CONTROL + SHIFT + S", hl.dsp.exec_cmd("zen-beta"))
+            -- Just adding this here in cause i wish to change the concord keybind
+            -- hl.bind("CONTROL + SHIFT + D", hl.dsp.exec_cmd("kitty -e tmux new-session -A -s concord /etc/profiles/per-user/${config.home.username}/bin/concord"))
             hl.bind("CONTROL + SHIFT + D", hl.dsp.exec_cmd("kitty -e tmux attach -t concord:0"))
             hl.bind("CONTROL + SHIFT + 1", hl.dsp.exec_cmd("proton-pass"))
             hl.bind("CONTROL + SHIFT + 2", hl.dsp.exec_cmd("protonvpn-app"))
