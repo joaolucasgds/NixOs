@@ -25,6 +25,7 @@
         scrcpy
         android-tools
         dbeaver-bin
+        freetube
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
