@@ -24,6 +24,7 @@
         sqlitebrowser
         scrcpy
         android-tools
+        dbeaver-bin
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
