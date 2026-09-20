@@ -26,6 +26,7 @@ let
         windSpeedUnit = "ms";
         use24HourClock = false;
         lockAtStartup = false;
+        acMonitorTimeout = 600;
         lockScreenShowProfileImage = false;
 
         # --- Cursor ---
