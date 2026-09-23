@@ -11,7 +11,7 @@
         tree                # Directory visualization
         wl-clipboard        # Command line clipboard (Wayland)
         fastfetch
-        inputs.gsr-ui-nix.packages.${pkgs.stdenv.hostPlatform.system}.gpu-screen-recorder-notification
+        gpu-screen-recorder-notification
         killall
         jq
         warp
