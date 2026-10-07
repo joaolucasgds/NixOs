@@ -11,7 +11,7 @@ __:
                 hour_format_24 = false;
                 image_preview_quality = "balanced";
                 image_protocol = "kitty";
-                media_playback = false;
+                media_playback = true;
                 show_avatars = true;
                 show_custom_emoji = true;
                 show_images = true;
