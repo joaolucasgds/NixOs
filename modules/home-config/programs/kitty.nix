@@ -30,6 +30,14 @@ __:
             copy_on_select = "yes";
             # A negative value tells Kitty to hide the mouse immediately when typing
             mouse_hide_wait = "-1.0"; 
+
+            #smear-cursor.nvim
+            cursor_trail = "3";
+            cursor_trail_decay = "0.08 0.25";
+            cursor_trail_start_threshold = "0";
+            cursor_trail_color = "none";
+
+            custom_shaders = "cursor-trail-motion-blur";
         };
 
         # Kitty does not have a native "live_config_reload" boolean, 
