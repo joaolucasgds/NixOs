@@ -26,6 +26,7 @@
         android-tools
         dbeaver-bin
         gtk-pipe-viewer
+        helvum
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
