@@ -38,7 +38,7 @@ __:
 
             voice = {
                 allow_microphone_transmit = true;
-                microphone_sensitivity = -30;
+                microphone_sensitivity = -60;
                 microphone_volume = 100;
                 noise_suppression = true;
                 push_to_talk = false;
