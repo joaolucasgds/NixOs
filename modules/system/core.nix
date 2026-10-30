@@ -27,6 +27,20 @@
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
+
+        # Android virtual microphone
+        extraConfig.pipewire-pulse."androidmic" = {
+            "pulse.cmd" = [
+                {
+                    cmd = "load-module";
+                    args = "module-null-sink sink_name=phone_mic_sink sink_properties=device.description=PhoneMic";
+                }
+                {
+                    cmd = "load-module";
+                    args = "module-remap-source master=phone_mic_sink.monitor source_name=phone_mic_source source_properties=device.description=PhoneMicrophone";
+                }
+            ];
+        };
     };
 
     # Make sudo ask for rootpw
