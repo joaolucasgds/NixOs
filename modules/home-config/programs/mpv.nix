@@ -7,7 +7,7 @@
             image-display-duration = "inf"; # Keeps images open forever
             keep-open = "yes";              # Pauses videos on the last frame instead of closing
         };
-        scripts = [pkgs.mpvScripts.mpris];
+        scripts = [pkgs.mpvScripts.mpris pkgs.mpvScripts.mpvacious];
         #Make sure images are zoomable
         extraInput = ''
             Ctrl+WHEEL_UP add video-zoom 0.1
