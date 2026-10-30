@@ -61,6 +61,10 @@
             rb(){
                 sudo systemctl restart bluetooth
             }
+
+            ff(){
+                fastfetch
+            }
         '' + lib.optionalString (hostvars.windowsBootEntry != "None") '' 
 
             windows() {
