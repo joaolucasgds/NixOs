@@ -24,6 +24,7 @@ let
 
         # --- System & Units ---
         windSpeedUnit = "ms";
+        osdPosition = 4;
         use24HourClock = false;
         lockAtStartup = false;
         acMonitorTimeout = 600;
