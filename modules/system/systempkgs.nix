@@ -28,6 +28,7 @@
         gtk-pipe-viewer
         helvum
         android-mic
+        unzip
 
         # --- Development & Git ---
         ripgrep             # Fast search tool (better grep)
