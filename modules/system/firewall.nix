@@ -1,11 +1,11 @@
-{ ... }:
+__:
 
 {
     networking.firewall = rec {
         enable = true;
 
-        # Minecraft
-        allowedTCPPorts = [ 25565 ];
+        # Minecraft and Android-Mic
+        allowedTCPPorts = [ 25565 54345 ];
         allowedUDPPorts = allowedTCPPorts;
 
         #KDE Connect
