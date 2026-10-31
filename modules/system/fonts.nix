@@ -14,5 +14,8 @@
         noto-fonts-color-emoji
         roboto
         ubuntu-classic
+
+        #DMS FONT
+        inter
     ];
 }
