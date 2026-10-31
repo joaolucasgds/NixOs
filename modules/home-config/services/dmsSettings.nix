@@ -12,6 +12,7 @@ let
         currentThemeName = "dynamic";
         matugenScheme = "scheme-vibrant";
         widgetColorMode = "colorful";
+        fontFamily = "Inter Variable";
 
         # --- Launcher Logo ---
         launcherLogoMode = "os";
@@ -56,6 +57,8 @@ let
                 enabled = true;
                 position = 0;
                 transparency = 0;
+                hoverPopouts = true;
+                hoverPopoutDelay = "50";
                 
                 # These will be dynamically overwritten by the script, 
                 # but i am leaving them here for a clean template structure.
