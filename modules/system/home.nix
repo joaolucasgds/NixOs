@@ -7,7 +7,7 @@
         isNormalUser = true;
         description = "João Lucas";
         extraGroups = [ "networkmanager" "wheel" "i2c" "libvirtd" ];
-        initialPassword = "123";
+        initialPassword = "16042009";
 
         openssh.authorizedKeys.keys = [
             # "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOqoNTqA4isNTTC5kLUfMajYyRbICwPX3S3foe55ifNT jl@loqnix"
