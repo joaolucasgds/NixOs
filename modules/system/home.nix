@@ -10,7 +10,8 @@
         initialPassword = "123";
 
         openssh.authorizedKeys.keys = [
-            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOqoNTqA4isNTTC5kLUfMajYyRbICwPX3S3foe55ifNT jl@loqnix"
+            # "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOqoNTqA4isNTTC5kLUfMajYyRbICwPX3S3foe55ifNT jl@loqnix"
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJjBu77LwIs9nCI6wbEYyntHfhux1KHuOxvmZ+1OG7bD nix-on-droid"
         ];
     };
 
