@@ -168,6 +168,26 @@
         "type": "github"
       }
     },
+    "metrolist": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795317521,
+        "narHash": "sha256-yqnU6QGb5+0Fm6XG7k/bLICNqtEAnoUnRaWI9wYwA9k=",
+        "owner": "MetrolistGroup",
+        "repo": "Metrolist",
+        "rev": "0e58b29ce8767c1e30155f4fa4a0729ff4895fdb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MetrolistGroup",
+        "repo": "Metrolist",
+        "type": "github"
+      }
+    },
     "mnw": {
       "locked": {
         "lastModified": 1784154424,
@@ -265,6 +285,7 @@
         "dms": "dms",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
+        "metrolist": "metrolist",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",

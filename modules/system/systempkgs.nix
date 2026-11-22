@@ -45,7 +45,7 @@
         proton-vpn           # VPN Client
 
         # --- Media & Entertainment ---
-        pear-desktop        # YouTube Music Client
+        inputs.metrolist.packages.${pkgs.stdenv.hostPlatform.system}.default #Metrolist music player
         veracrypt           # Encryption tool (Commented out: build failure Jan 2026)
         heroic
         keypunch
