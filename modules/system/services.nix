@@ -2,6 +2,9 @@ __:
 
 {
     services = {
+        #Disable speechd for smaller system
+        speechd.enable = false;
+
         # Firmware updates
         fwupd.enable = true;
 
