@@ -99,6 +99,7 @@ in
             hl.bind("CONTROL + SHIFT + 1", hl.dsp.exec_cmd("proton-pass"))
             hl.bind("CONTROL + SHIFT + 2", hl.dsp.exec_cmd("protonvpn-app"))
             hl.bind("CONTROL + SHIFT + X", hl.dsp.exec_cmd("gtk-pipe-viewer"))
+            hl.bind("CONTROL + SHIFT + Z", hl.dsp.exec_cmd("metrolist"))
             hl.bind("CONTROL + SHIFT + A", hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
             hl.bind("CONTROL + SHIFT + 3", hl.dsp.exec_cmd("dms ipc call settings toggle"))
             hl.bind("CONTROL + SHIFT + E", hl.dsp.exec_cmd("scrcpy --video-bit-rate=5M --max-fps=61 --max-size=720 --tcpip"))
