@@ -95,6 +95,8 @@
         # Gaming Optimization
         gamemode.enable = true;
 
+        gamescope.enable = true;
+
         # Steam Platform
         steam = {
             enable = true;
