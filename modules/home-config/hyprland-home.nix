@@ -7,6 +7,7 @@ __:
         ./hyprland-home/hyprlandlua.nix
         ./hyprland-home/DankMaterialShell.nix
         ./hyprland-home/theming.nix
+        ./hyprland-home/youtube.nix
 
         ./programs/yazi.nix
         ./programs/mpv.nix

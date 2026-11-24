@@ -107,7 +107,7 @@ in
             hl.bind("CONTROL + SHIFT + D", hl.dsp.exec_cmd("kitty -e tmux new-session -A -s concord /etc/profiles/per-user/${config.home.username}/bin/concord"))
             hl.bind("CONTROL + SHIFT + 1", hl.dsp.exec_cmd("proton-pass"))
             hl.bind("CONTROL + SHIFT + 2", hl.dsp.exec_cmd("protonvpn-app"))
-            hl.bind("CONTROL + SHIFT + X", hl.dsp.exec_cmd("gtk-pipe-viewer"))
+            hl.bind("CONTROL + SHIFT + X", hl.dsp.exec_cmd("youtube"))
             hl.bind("CONTROL + SHIFT + Z", hl.dsp.exec_cmd("metrolist"))
             hl.bind("CONTROL + SHIFT + A", hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
             hl.bind("CONTROL + SHIFT + 3", hl.dsp.exec_cmd("dms ipc call settings toggle"))
