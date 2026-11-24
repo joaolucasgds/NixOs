@@ -1,9 +1,10 @@
-{ ... }: 
+__: 
 
 {
+    xdg.portal.config.hyprland.default = [ "hyprland" "gtk" ];
+
     imports = [
         ./hyprland-home/hyprlandlua.nix
-        ./hyprland-home/hyprportal.nix
         ./hyprland-home/DankMaterialShell.nix
         ./hyprland-home/theming.nix
 
