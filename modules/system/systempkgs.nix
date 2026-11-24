@@ -15,7 +15,7 @@
         killall
         jq
         warp
-        motrix
+        transmission_4-gtk
         pulseaudio
         ncdu
         dragon-drop
