@@ -46,6 +46,7 @@
 
         # --- Media & Entertainment ---
         inputs.metrolist.packages.${pkgs.stdenv.hostPlatform.system}.default #Metrolist music player
+        tsukimi
         veracrypt           # Encryption tool (Commented out: build failure Jan 2026)
         heroic
         keypunch
