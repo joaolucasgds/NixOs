@@ -35,7 +35,6 @@
         fd                  # Fast file finder (better find)
         android-studio
         gradle
-        qemu
         jdk21
         jdk25
 
@@ -87,10 +86,6 @@
             package = pkgs.gpu-screen-recorder.override {
                 ffmpeg = pkgs.ffmpeg_6;
             };
-        };
-
-        virt-manager = {
-            enable = true;
         };
 
         # Gaming Optimization

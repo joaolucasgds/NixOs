@@ -6,7 +6,7 @@
     users.users.jl = {
         isNormalUser = true;
         description = "João Lucas";
-        extraGroups = [ "networkmanager" "wheel" "i2c" "libvirtd" ];
+        extraGroups = [ "networkmanager" "wheel" "i2c" ];
         initialPassword = "16042009";
 
         openssh.authorizedKeys.keys = [
