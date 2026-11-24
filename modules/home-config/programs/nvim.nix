@@ -1,7 +1,7 @@
 { inputs, ... }:
 
 {
-    imports = [ inputs.nvf.homeManagerModules.nvf ];
+    imports = [ inputs.nvf.homeModules.nvf ];
 
     programs.nvf = {
 	    enable = true;
