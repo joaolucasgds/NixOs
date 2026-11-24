@@ -72,10 +72,19 @@ in
             hl.animation({ leaf = "workspaces", enabled = true, speed = 1, bezier = "default" })
 
             hl.monitor({
+                output = "${hostvars.prMonitor}",
+                mode = "highrr",
+                position = "auto",
+                scale = 1,
+                bitdepth = 10,
+            })
+
+            hl.monitor({
                 output = "",
                 mode = "highrr",
                 position = "auto",
                 scale = "1",
+                bitdepth = 10
             })
 
             hl.workspace_rule({ workspace = "1", monitor = "${hostvars.prMonitor}", default = true })
