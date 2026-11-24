@@ -136,8 +136,7 @@
                     };
                 };
 
-                statusline.lualine = {
-                    enable = true;
+                statusline.lualine.setupOpts.options = {
                     theme = "base16";
                     componentSeparator = { left = ""; right = ""; };
                     sectionSeparator = { left = ""; right = ""; };
