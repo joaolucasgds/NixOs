@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config,... }:
 
 {
     qt = {
@@ -19,4 +19,8 @@
         pkgs.adwaita-icon-theme
     ];
 
+    #Putting this here so i never have to press the "Apply GTK colors" button on new installs
+    xdg.configFile."gtk-4.0/gtk.css".text = ''
+        @import url("dank-colors.css");
+    '';
 }
