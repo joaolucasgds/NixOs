@@ -1,37 +1,24 @@
 { pkgs, config, hostvars, ... }:
 
 let
-    baseSettings = {
-        # --- Wallpaper ---
-        wallpaper = {
-            directory = "${config.home.homeDirectory}/Pictures/Wallpapers";
-        };
-        wallpaperFillMode = "Fill";
+        baseSettings = {
+        configVersion = 42;
 
-        # --- Theming & Visuals ---
+        # Wallpaper and theme
+        wallpaperFillMode = "Fill";
         currentThemeName = "dynamic";
         matugenScheme = "scheme-vibrant";
         widgetColorMode = "colorful";
         fontFamily = "Inter Variable";
 
-        # --- Launcher Logo ---
-        launcherLogoMode = "os";
-        launcherLogoCustomPath = "";
-        launcherLogoColorOverride = "primary";
-        launcherLogoColorInvertOnMode = false;
-        launcherLogoBrightness = 0.5;
-        launcherLogoContrast = 1;
-        launcherLogoSizeOffset = 8;
-
-        # --- System & Units ---
+        # System and units
         windSpeedUnit = "ms";
         osdPosition = 4;
-        use24HourClock = false;
+        clockFormat = "12h";
         lockAtStartup = false;
         acMonitorTimeout = 600;
         lockScreenShowProfileImage = false;
 
-        # --- Cursor ---
         cursorSettings = {
             theme = "Adwaita";
             size = 24;
@@ -44,46 +31,60 @@ let
                 hideOnTouch = false;
                 inactiveTimeout = 0;
             };
-            dwl = {
-                cursorHideTimeout = 0;
-            };
+            dwl.cursorHideTimeout = 0;
         };
 
-        # --- Bar Configuration ---
+        # Transparent bar with opaque floating widget pills
+        barElevationEnabled = false;
         barConfigs = [
             {
                 id = "default";
                 name = "Main Bar";
                 enabled = true;
+                visible = true;
                 position = 0;
+
+                followInterfaceStyle = false;
                 transparency = 0;
+                widgetFollowInterfaceStyle = false;
+                widgetTransparency = 1;
+                widgetStyle = "pills";
+
+                surfaceColor = "default";
+                surfaceCustomColor = "#6750A4";
+                gothCornersEnabled = false;
+                gothCornerRadiusOverride = false;
+                squareCorners = false;
+                attachToScreenEdge = false;
+                noBackground = false;
+                innerPadding = 2;
+                borderEnabled = false;
+
                 hoverPopouts = true;
                 hoverPopoutDelay = "50";
-                
-                # These will be dynamically overwritten by the script, 
-                # but i am leaving them here for a clean template structure.
-                showOnLastDisplay = false; 
+
+                # dms-monitor-fix fills these in at startup.
                 screenPreferences = [];
+                showOnLastDisplay = false;
 
                 leftWidgets = [
-                    "launcherButton"
+                    {
+                        id = "launcherButton";
+                        enabled = true;
+                        launcherLogoMode = "os";
+                        launcherLogoColorOverride = "primary";
+                        launcherLogoSizeOffset = 8;
+                    }
                     "workspaceSwitcher"
                     {
                         id = "focusedWindow";
                         enabled = true;
                         focusedWindowCompactMode = true;
                     }
-                    {
-                        id = "dankKDEConnect";
-                        enabled = true;
-                    }
+                    { id = "dankKDEConnect"; enabled = true; }
                 ];
 
-                centerWidgets = [
-                    "music"
-                    "clock"
-                    "weather"
-                ];
+                centerWidgets = [ "music" "clock" "weather" ];
 
                 rightWidgets = [
                     { id = "privacyIndicator"; enabled = true; }
@@ -98,7 +99,7 @@ let
     };
 in
 {
-    home.file.".config/DankMaterialShell/settings-template.json".text = builtins.toJSON baseSettings;
+    home.file.".config/dms/settings-template.json".text = builtins.toJSON baseSettings;
 
     systemd.user.services.dms-monitor-fix = {
         Unit = {
@@ -119,14 +120,14 @@ in
             PrivateTmp = true;
             ProtectSystem = "strict";
             ProtectHome = "read-only";
-            ReadWritePaths = [ "%h/.config/DankMaterialShell" ];
+            ReadWritePaths = [ "%h/.config/dms" ];
 
             ExecStart = "${pkgs.writeShellScript "dms-inject" ''
                 TARGET_PORT="${hostvars.prMonitor}"
                 DEFAULT_PORT="${hostvars.seMonitor}"
                 
-                TEMPLATE="$HOME/.config/DankMaterialShell/settings-template.json"
-                REAL_SETTINGS="$HOME/.config/DankMaterialShell/settings.json"
+                TEMPLATE="$HOME/.config/dms/settings-template.json"
+                REAL_SETTINGS="$HOME/.config/dms/settings.json"
 
                 # Fetch the JSON snippet for the monitors if they exist
                 PR_JSON=$(${pkgs.hyprland}/bin/hyprctl monitors -j | ${pkgs.jq}/bin/jq -r ".[] | select(.name == \"$TARGET_PORT\")")

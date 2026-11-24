@@ -22,7 +22,7 @@
         };
 
         lanzaboote = { 
-            url = "github:nix-community/lanzaboote/v1.1.0";#Don't forget to change this version from time to time
+            url = "github:nix-community/lanzaboote/v1.2.0";#Don't forget to change this version from time to time
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
