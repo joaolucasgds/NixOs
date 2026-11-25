@@ -129,7 +129,7 @@ in
             hl.bind(mainMod .. " + S", hl.dsp.window.move({ direction = "u" }))
             hl.bind(mainMod .. " + A", hl.dsp.window.move({ direction = "d" }))
 
-            hl.bind(mainMod .. " + CONTROL + Shift_L", hl.dsp.focus({ workspace = 1 }))
+            hl.bind(mainMod .. " + CONTROL + SHIFT + code:50", hl.dsp.focus({ workspace = 1 }))
             hl.bind(mainMod .. " + CONTROL + backslash", hl.dsp.focus({ workspace = 2 }))
             hl.bind(mainMod .. " + CONTROL + Z", hl.dsp.focus({ workspace = 3 }))
             hl.bind(mainMod .. " + CONTROL + X", hl.dsp.focus({ workspace = 4 }))
