@@ -120,6 +120,8 @@ in
             hl.bind("CONTROL + SHIFT + 1", hl.dsp.exec_cmd("proton-pass"))
             hl.bind("CONTROL + SHIFT + 2", hl.dsp.exec_cmd("protonvpn-app"))
             hl.bind("CONTROL + SHIFT + X", hl.dsp.exec_cmd("youtube"))
+            hl.bind("CONTROL + SHIFT + Tab", hl.dsp.exec_cmd("dms ipc call color-picker open"))
+            hl.bind("CONTROL + SHIFT + apostrophe", hl.dsp.exec_cmd("dms color pick"))
             hl.bind("CONTROL + SHIFT + Z", hl.dsp.exec_cmd("metrolist"))
             hl.bind("CONTROL + SHIFT + A", hl.dsp.exec_cmd("dms ipc call spotlight toggle"))
             hl.bind("CONTROL + SHIFT + 3", hl.dsp.exec_cmd("dms ipc call settings toggle"))
