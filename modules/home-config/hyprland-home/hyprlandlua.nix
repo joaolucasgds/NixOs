@@ -5,6 +5,18 @@ let
     defaultWallpaper = "${masterWallpaperDir}/makima.png";
 in
 {
+    xdg.configFile."hypr/br-caps-f24.xkb".text = ''
+        xkb_keymap {
+            xkb_keycodes { include "evdev+aliases(qwerty)" };
+            xkb_types { include "complete" };
+            xkb_compatibility { include "complete" };
+            xkb_symbols {
+                include "pc+br+inet(evdev)+shift(both_capslock)"
+                replace key <CAPS> { [ F24 ] };
+            };
+        };
+    '';
+
     wayland.windowManager.hyprland = {
         enable = true;
         package = null; # installed as a systempkg, null here to prevent duplicate
@@ -56,7 +68,7 @@ in
                 },
                 input = {
                     accel_profile = "flat",
-                    kb_layout = "br",
+                    kb_file = "${config.xdg.configHome}/hypr/br-caps-f24.xkb",
                 },
                 misc = {
                     disable_hyprland_logo = true,
@@ -124,7 +136,7 @@ in
             hl.bind(mainMod .. " + Z", hl.dsp.focus({ direction = "up" }))
             hl.bind(mainMod .. " + backslash", hl.dsp.focus({ direction = "down" }))
 
-            hl.bind(mainMod .. " + CAPS + Caps_Lock", hl.dsp.window.move({ direction = "l" }))
+            hl.bind(mainMod .. " + F24", hl.dsp.window.move({ direction = "l" }))
             hl.bind(mainMod .. " + D", hl.dsp.window.move({ direction = "r" }))
             hl.bind(mainMod .. " + S", hl.dsp.window.move({ direction = "u" }))
             hl.bind(mainMod .. " + A", hl.dsp.window.move({ direction = "d" }))
@@ -134,7 +146,7 @@ in
             hl.bind(mainMod .. " + CONTROL + Z", hl.dsp.focus({ workspace = 3 }))
             hl.bind(mainMod .. " + CONTROL + X", hl.dsp.focus({ workspace = 4 }))
             hl.bind(mainMod .. " + CONTROL + C", hl.dsp.focus({ workspace = 5 }))
-            hl.bind(mainMod .. " + CONTROL + CAPS + Caps_Lock", hl.dsp.focus({ workspace = 6 }))
+            hl.bind(mainMod .. " + CONTROL + F24", hl.dsp.focus({ workspace = 6 }))
             hl.bind(mainMod .. " + CONTROL + A", hl.dsp.focus({ workspace = 7 }))
             hl.bind(mainMod .. " + CONTROL + S", hl.dsp.focus({ workspace = 8 }))
             hl.bind(mainMod .. " + CONTROL + D", hl.dsp.focus({ workspace = 9 }))
@@ -144,7 +156,7 @@ in
             hl.bind("CONTROL + ALT + Z", hl.dsp.window.move({ workspace = 3 }))
             hl.bind("CONTROL + ALT + X", hl.dsp.window.move({ workspace = 4 }))
             hl.bind("CONTROL + ALT + C", hl.dsp.window.move({ workspace = 5 }))
-            hl.bind("CONTROL + ALT + CAPS + Caps_Lock", hl.dsp.window.move({ workspace = 6 }))
+            hl.bind("CONTROL + ALT + F24", hl.dsp.window.move({ workspace = 6 }))
             hl.bind("CONTROL + ALT + A", hl.dsp.window.move({ workspace = 7 }))
             hl.bind("CONTROL + ALT + S", hl.dsp.window.move({ workspace = 8 }))
             hl.bind("CONTROL + ALT + D", hl.dsp.window.move({ workspace = 9 }))
@@ -192,7 +204,7 @@ in
                 hl.bind(mainMod .. " + CONTROL + Z", hl.dsp.focus({ workspace = 3 }))
                 hl.bind(mainMod .. " + CONTROL + X", hl.dsp.focus({ workspace = 4 }))
                 hl.bind(mainMod .. " + CONTROL + C", hl.dsp.focus({ workspace = 5 }))
-                hl.bind(mainMod .. " + CONTROL + CAPS + Caps_Lock", hl.dsp.focus({ workspace = 6 }))
+                hl.bind(mainMod .. " + CONTROL + F24", hl.dsp.focus({ workspace = 6 }))
                 hl.bind(mainMod .. " + CONTROL + A", hl.dsp.focus({ workspace = 7 }))
                 hl.bind(mainMod .. " + CONTROL + S", hl.dsp.focus({ workspace = 8 }))
                 hl.bind(mainMod .. " + CONTROL + D", hl.dsp.focus({ workspace = 9 }))
@@ -202,7 +214,7 @@ in
                 hl.bind(mainMod .. " + Z", hl.dsp.focus({ direction = "up" }))
                 hl.bind(mainMod .. " + backslash", hl.dsp.focus({ direction = "down" }))
 
-                hl.bind(mainMod .. " + CAPS + Caps_Lock", hl.dsp.window.move({ direction = "l" }))
+                hl.bind(mainMod .. " + F24", hl.dsp.window.move({ direction = "l" }))
                 hl.bind(mainMod .. " + D", hl.dsp.window.move({ direction = "r" }))
                 hl.bind(mainMod .. " + S", hl.dsp.window.move({ direction = "u" }))
                 hl.bind(mainMod .. " + A", hl.dsp.window.move({ direction = "d" }))
@@ -225,7 +237,7 @@ in
             end)
 
             hl.define_submap("nothing", function()
-                hl.bind("SUPER + SHIFT + ALT + CONTROL + F24", hl.dsp.exec_cmd("nothing"))
+                hl.bind("SUPER + SHIFT + ALT + CONTROL + F25", hl.dsp.exec_cmd("nothing"))
             end)
 
             -- Required DMS Rules
